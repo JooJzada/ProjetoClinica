@@ -13,11 +13,11 @@ namespace ProjetoClinica.Funcionários {
 
         private void btnFuncionarioAdd_Click(object sender, EventArgs e) {
 
-            //if (imgFuncionario == null)
-            //{
-            //    XtraMessageBox.Show("Anexe uma imagem do Funcionário!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
+            if (imgFuncionario == null)
+            {
+                XtraMessageBox.Show("Anexe uma imagem do Funcionário!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             //byte[] imagemConvertidaVarBinaryMAX = ConversorImagem.ConvertImgToByte(imgFuncionario.Image);
 

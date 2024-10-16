@@ -49,6 +49,7 @@
     <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeMap.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeMap.v24.1.UI, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -172,6 +173,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes\form_ClienteAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\form_ClienteAdd.Designer.cs">
+      <DependentUpon>form_ClienteAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\form_ClienteEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\form_ClienteEditar.Designer.cs">
+      <DependentUpon>form_ClienteEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\form_ClientePrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\form_ClientePrincipal.Designer.cs">
+      <DependentUpon>form_ClientePrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Context\projeto_clinicaContext.cs" />
     <Compile Include="Funcionários\form_FuncionarioAdd.cs">
       <SubType>Form</SubType>
@@ -208,7 +227,17 @@
     <Compile Include="1-Tela Inicial\form_TelaInicial.Designer.cs">
       <DependentUpon>form_TelaInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilidade\CalcIdade.cs" />
     <Compile Include="Utilidade\ConversorImagem.cs" />
+    <EmbeddedResource Include="Clientes\form_ClienteAdd.resx">
+      <DependentUpon>form_ClienteAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\form_ClienteEditar.resx">
+      <DependentUpon>form_ClienteEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\form_ClientePrincipal.resx">
+      <DependentUpon>form_ClientePrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Funcionários\form_FuncionarioAdd.resx">
       <DependentUpon>form_FuncionarioAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +263,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -248,6 +278,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem_2024-10-11_085113537-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

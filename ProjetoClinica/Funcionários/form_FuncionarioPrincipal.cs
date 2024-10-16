@@ -1,19 +1,11 @@
 ﻿using DevExpress.XtraEditors;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Data.Linq;
-using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using ProjetoClinica.Context;
 using ProjetoClinica.Funcionários;
-using ProjetoClinica.Models;
 
 namespace ProjetoClinica
 {
@@ -73,7 +65,7 @@ namespace ProjetoClinica
                 context.tb_funcionarios.Remove(funcionario);
                 context.SaveChanges();
                 
-                XtraMessageBox.Show("Funcionário Deletado com sucesso!", "Sucesso", MessageBoxButtons.OK,
+                XtraMessageBox.Show("Funcionário deletado com sucesso!", "Sucesso", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 CarregarTabelaFuncionario();
             }

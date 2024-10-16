@@ -25,8 +25,8 @@ namespace ProjetoClinica.Models
         [StringLength(14)]
        
         public string cl_cpf { get; set; }
-        [Column(TypeName = "datetime")]
-        public DateTime cl_data_nascimento { get; set; }
+        [StringLength(11)]
+        public string cl_data_nascimento { get; set; }
         [Required]
         [StringLength(16)]
        

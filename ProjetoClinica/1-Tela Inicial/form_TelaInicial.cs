@@ -1,13 +1,4 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using ProjetoClinica.Clientes;
 using ProjetoClinica.Funcionários;
 
 namespace ProjetoClinica {
@@ -25,6 +16,9 @@ namespace ProjetoClinica {
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.btnFuncionarioPrincipalMenu = new DevExpress.XtraBars.BarButtonItem();
             this.btnFuncionarioAddMenu = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -56,9 +50,12 @@ namespace ProjetoClinica {
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barSubItem1,
             this.btnFuncionarioPrincipalMenu,
-            this.btnFuncionarioAddMenu});
+            this.btnFuncionarioAddMenu,
+            this.barSubItem2,
+            this.barButtonItem1,
+            this.barButtonItem2});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 3;
+            this.barManager1.MaxItemId = 6;
             // 
             // bar2
             // 
@@ -67,7 +64,8 @@ namespace ProjetoClinica {
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -94,6 +92,29 @@ namespace ProjetoClinica {
             this.btnFuncionarioAddMenu.Id = 2;
             this.btnFuncionarioAddMenu.Name = "btnFuncionarioAddMenu";
             this.btnFuncionarioAddMenu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFuncionarioAddMenu_ItemClick_1);
+            // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "Clientes";
+            this.barSubItem2.Id = 3;
+            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Tela Principal";
+            this.barButtonItem1.Id = 4;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Adicionar cliente";
+            this.barButtonItem2.Id = 5;
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -155,6 +176,18 @@ namespace ProjetoClinica {
         private void btnFuncionarioAddMenu_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
             form_FuncionarioAdd funcionarioAdd = new form_FuncionarioAdd();
             funcionarioAdd.ShowDialog();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            form_ClientePrincipal clientePrincipal = new form_ClientePrincipal();
+            clientePrincipal.ShowDialog();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            form_ClienteAdd clienteAdd = new form_ClienteAdd();
+            clienteAdd.ShowDialog();
         }
     }
 }

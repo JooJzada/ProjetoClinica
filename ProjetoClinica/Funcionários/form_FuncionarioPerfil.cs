@@ -1,14 +1,5 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using System;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using ProjetoClinica.Context;
 using ProjetoClinica.Utilidade;
 
@@ -34,18 +25,6 @@ namespace ProjetoClinica.Funcionários
             {
                 _funcionarioId = value;
                 var funcionario = context.tb_funcionarios.Find(_funcionarioId);
-
-                #region Calcular Idade
-                var anoNasc = Convert.ToDateTime(funcionario.fun_DataNascimento);
-                int anoNascInt = anoNasc.Year;
-                //int idade = anoAtual - Convert.ToInt32(anoNasc);
-                int idade = anoAtual - anoNascInt;
-
-                if (DateTime.Now < anoNasc.AddYears(idade))
-                {
-                    idade--;
-                }
-                #endregion
                 
                 #region Cargo
 
@@ -68,8 +47,10 @@ namespace ProjetoClinica.Funcionários
                 } 
                 #endregion
 
+                //var idade = CalcIdade.CalcularIdadeFuncionario(funcionario.fun_ID);
+
                 lblFuncionarioNascPerfil.Text = funcionario.fun_DataNascimento;
-                lblFuncionarioNomeIdadePerfil.Text = $"{funcionario.fun_Nome}, {idade}";
+                lblFuncionarioNomeIdadePerfil.Text = $"{funcionario.fun_Nome}, {CalcIdade.CalcularIdadeFuncionario(funcionario.fun_ID)}";
                 lblFuncionarioCpfPerfil.Text = funcionario.fun_CPF;
                 lblFuncionarioEmailPerfil.Text = funcionario.fun_Email;
                 lblFuncionarioTelePerfil.Text = funcionario.fun_Telefone;
