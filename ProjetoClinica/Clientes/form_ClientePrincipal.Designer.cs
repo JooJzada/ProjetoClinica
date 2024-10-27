@@ -29,20 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.windowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_ClientePrincipal));
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            this.btnPanelVoltarNovo = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.windowsUIButtonPanel2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
+            this.btnPanelClientePMED = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.gridClientes = new DevExpress.XtraGrid.GridControl();
             this.viewClientes = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelMiniPerfilCliente = new DevExpress.XtraEditors.PanelControl();
             this.lblFuncionarioCrmPerfil = new DevExpress.XtraEditors.LabelControl();
-            this.lblFuncionarioCpfPerfil = new DevExpress.XtraEditors.LabelControl();
+            this.lblClienteCpfPerfilMini = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.lblFuncionarioTelePerfil = new DevExpress.XtraEditors.LabelControl();
+            this.lblClienteTelePerfilMini = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.lblFuncionarioEmailPerfil = new DevExpress.XtraEditors.LabelControl();
+            this.lblClienteEmailPerfilMini = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.lblFuncionarioNascPerfil = new DevExpress.XtraEditors.LabelControl();
+            this.lblClienteNascPerfilMini = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.lblClienteNomeIdadeMini = new DevExpress.XtraEditors.LabelControl();
             this.imgClientePerfil = new System.Windows.Forms.PictureBox();
@@ -63,18 +69,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
-            // windowsUIButtonPanel1
+            // btnPanelVoltarNovo
             // 
-            this.windowsUIButtonPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(164)))), ((int)(((byte)(250)))));
-            this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
-            this.windowsUIButtonPanel1.Location = new System.Drawing.Point(0, -3);
-            this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
-            this.windowsUIButtonPanel1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(75, 137);
-            this.windowsUIButtonPanel1.TabIndex = 0;
-            this.windowsUIButtonPanel1.Text = "windowsUIButtonPanel1";
+            this.btnPanelVoltarNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(164)))), ((int)(((byte)(250)))));
+            windowsUIButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions1.SvgImage")));
+            windowsUIButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions2.SvgImage")));
+            this.btnPanelVoltarNovo.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Voltar", false, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Voltar", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Novo", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Novo", -1, false)});
+            this.btnPanelVoltarNovo.Location = new System.Drawing.Point(0, -628);
+            this.btnPanelVoltarNovo.Name = "btnPanelVoltarNovo";
+            this.btnPanelVoltarNovo.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.btnPanelVoltarNovo.Size = new System.Drawing.Size(73, 1395);
+            this.btnPanelVoltarNovo.TabIndex = 0;
+            this.btnPanelVoltarNovo.Text = "windowsUIButtonPanel1";
+            this.btnPanelVoltarNovo.UseButtonBackgroundImages = false;
+            this.btnPanelVoltarNovo.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.btnPanelVoltarNovo_ButtonClick);
             // 
             // labelControl1
             // 
@@ -86,20 +97,27 @@
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Tabela de Clientes";
             // 
-            // windowsUIButtonPanel2
+            // btnPanelClientePMED
             // 
-            this.windowsUIButtonPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(164)))), ((int)(((byte)(250)))));
-            this.windowsUIButtonPanel2.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
-            this.windowsUIButtonPanel2.Location = new System.Drawing.Point(0, 140);
-            this.windowsUIButtonPanel2.Name = "windowsUIButtonPanel2";
-            this.windowsUIButtonPanel2.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.windowsUIButtonPanel2.Size = new System.Drawing.Size(75, 582);
-            this.windowsUIButtonPanel2.TabIndex = 2;
-            this.windowsUIButtonPanel2.Text = "windowsUIButtonPanel2";
+            this.btnPanelClientePMED.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(164)))), ((int)(((byte)(250)))));
+            windowsUIButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions3.SvgImage")));
+            windowsUIButtonImageOptions4.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions4.SvgImage")));
+            windowsUIButtonImageOptions5.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions5.SvgImage")));
+            this.btnPanelClientePMED.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Perfil", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Perfil", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Editar", true, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Editar", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Deletar", true, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Deletar", -1, false)});
+            this.btnPanelClientePMED.Location = new System.Drawing.Point(0, 195);
+            this.btnPanelClientePMED.Name = "btnPanelClientePMED";
+            this.btnPanelClientePMED.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.btnPanelClientePMED.Size = new System.Drawing.Size(73, 529);
+            this.btnPanelClientePMED.TabIndex = 2;
+            this.btnPanelClientePMED.Text = "windowsUIButtonPanel2";
+            this.btnPanelClientePMED.UseButtonBackgroundImages = false;
+            this.btnPanelClientePMED.Visible = false;
+            this.btnPanelClientePMED.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.btnPanelClientePMED_ButtonClick);
             // 
             // gridClientes
             // 
@@ -115,7 +133,9 @@
             // 
             this.viewClientes.GridControl = this.gridClientes;
             this.viewClientes.Name = "viewClientes";
-            this.viewClientes.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.viewClientes_RowClick);
+            this.viewClientes.OptionsBehavior.Editable = false;
+            this.viewClientes.OptionsView.ShowIndicator = false;
+            this.viewClientes.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.viewClientes_RowCellClick);
             this.viewClientes.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.viewClientes_PopupMenuShowing);
             // 
             // panelMiniPerfilCliente
@@ -123,13 +143,13 @@
             this.panelMiniPerfilCliente.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(164)))), ((int)(((byte)(250)))));
             this.panelMiniPerfilCliente.Appearance.Options.UseBackColor = true;
             this.panelMiniPerfilCliente.Controls.Add(this.lblFuncionarioCrmPerfil);
-            this.panelMiniPerfilCliente.Controls.Add(this.lblFuncionarioCpfPerfil);
+            this.panelMiniPerfilCliente.Controls.Add(this.lblClienteCpfPerfilMini);
             this.panelMiniPerfilCliente.Controls.Add(this.labelControl7);
-            this.panelMiniPerfilCliente.Controls.Add(this.lblFuncionarioTelePerfil);
+            this.panelMiniPerfilCliente.Controls.Add(this.lblClienteTelePerfilMini);
             this.panelMiniPerfilCliente.Controls.Add(this.labelControl5);
-            this.panelMiniPerfilCliente.Controls.Add(this.lblFuncionarioEmailPerfil);
+            this.panelMiniPerfilCliente.Controls.Add(this.lblClienteEmailPerfilMini);
             this.panelMiniPerfilCliente.Controls.Add(this.labelControl3);
-            this.panelMiniPerfilCliente.Controls.Add(this.lblFuncionarioNascPerfil);
+            this.panelMiniPerfilCliente.Controls.Add(this.lblClienteNascPerfilMini);
             this.panelMiniPerfilCliente.Controls.Add(this.labelControl2);
             this.panelMiniPerfilCliente.Controls.Add(this.lblClienteNomeIdadeMini);
             this.panelMiniPerfilCliente.Controls.Add(this.imgClientePerfil);
@@ -137,6 +157,7 @@
             this.panelMiniPerfilCliente.Name = "panelMiniPerfilCliente";
             this.panelMiniPerfilCliente.Size = new System.Drawing.Size(664, 165);
             this.panelMiniPerfilCliente.TabIndex = 4;
+            this.panelMiniPerfilCliente.Visible = false;
             // 
             // lblFuncionarioCrmPerfil
             // 
@@ -148,15 +169,15 @@
             this.lblFuncionarioCrmPerfil.TabIndex = 26;
             this.lblFuncionarioCrmPerfil.Text = "123456-SP";
             // 
-            // lblFuncionarioCpfPerfil
+            // lblClienteCpfPerfilMini
             // 
-            this.lblFuncionarioCpfPerfil.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.lblFuncionarioCpfPerfil.Appearance.Options.UseFont = true;
-            this.lblFuncionarioCpfPerfil.Location = new System.Drawing.Point(171, 95);
-            this.lblFuncionarioCpfPerfil.Name = "lblFuncionarioCpfPerfil";
-            this.lblFuncionarioCpfPerfil.Size = new System.Drawing.Size(101, 17);
-            this.lblFuncionarioCpfPerfil.TabIndex = 25;
-            this.lblFuncionarioCpfPerfil.Text = "000.000.000-00";
+            this.lblClienteCpfPerfilMini.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.lblClienteCpfPerfilMini.Appearance.Options.UseFont = true;
+            this.lblClienteCpfPerfilMini.Location = new System.Drawing.Point(171, 95);
+            this.lblClienteCpfPerfilMini.Name = "lblClienteCpfPerfilMini";
+            this.lblClienteCpfPerfilMini.Size = new System.Drawing.Size(101, 17);
+            this.lblClienteCpfPerfilMini.TabIndex = 25;
+            this.lblClienteCpfPerfilMini.Text = "000.000.000-00";
             // 
             // labelControl7
             // 
@@ -168,15 +189,15 @@
             this.labelControl7.TabIndex = 24;
             this.labelControl7.Text = "CPF:";
             // 
-            // lblFuncionarioTelePerfil
+            // lblClienteTelePerfilMini
             // 
-            this.lblFuncionarioTelePerfil.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.lblFuncionarioTelePerfil.Appearance.Options.UseFont = true;
-            this.lblFuncionarioTelePerfil.Location = new System.Drawing.Point(199, 138);
-            this.lblFuncionarioTelePerfil.Name = "lblFuncionarioTelePerfil";
-            this.lblFuncionarioTelePerfil.Size = new System.Drawing.Size(111, 17);
-            this.lblFuncionarioTelePerfil.TabIndex = 23;
-            this.lblFuncionarioTelePerfil.Text = "(71) 9 4002-8922";
+            this.lblClienteTelePerfilMini.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.lblClienteTelePerfilMini.Appearance.Options.UseFont = true;
+            this.lblClienteTelePerfilMini.Location = new System.Drawing.Point(199, 138);
+            this.lblClienteTelePerfilMini.Name = "lblClienteTelePerfilMini";
+            this.lblClienteTelePerfilMini.Size = new System.Drawing.Size(111, 17);
+            this.lblClienteTelePerfilMini.TabIndex = 23;
+            this.lblClienteTelePerfilMini.Text = "(71) 9 4002-8922";
             // 
             // labelControl5
             // 
@@ -188,15 +209,15 @@
             this.labelControl5.TabIndex = 22;
             this.labelControl5.Text = "Telefone:";
             // 
-            // lblFuncionarioEmailPerfil
+            // lblClienteEmailPerfilMini
             // 
-            this.lblFuncionarioEmailPerfil.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.lblFuncionarioEmailPerfil.Appearance.Options.UseFont = true;
-            this.lblFuncionarioEmailPerfil.Location = new System.Drawing.Point(180, 116);
-            this.lblFuncionarioEmailPerfil.Name = "lblFuncionarioEmailPerfil";
-            this.lblFuncionarioEmailPerfil.Size = new System.Drawing.Size(182, 17);
-            this.lblFuncionarioEmailPerfil.TabIndex = 21;
-            this.lblFuncionarioEmailPerfil.Text = "emailzão.silveira@hotmail.com";
+            this.lblClienteEmailPerfilMini.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.lblClienteEmailPerfilMini.Appearance.Options.UseFont = true;
+            this.lblClienteEmailPerfilMini.Location = new System.Drawing.Point(180, 116);
+            this.lblClienteEmailPerfilMini.Name = "lblClienteEmailPerfilMini";
+            this.lblClienteEmailPerfilMini.Size = new System.Drawing.Size(182, 17);
+            this.lblClienteEmailPerfilMini.TabIndex = 21;
+            this.lblClienteEmailPerfilMini.Text = "emailzão.silveira@hotmail.com";
             // 
             // labelControl3
             // 
@@ -208,15 +229,15 @@
             this.labelControl3.TabIndex = 20;
             this.labelControl3.Text = "Email:";
             // 
-            // lblFuncionarioNascPerfil
+            // lblClienteNascPerfilMini
             // 
-            this.lblFuncionarioNascPerfil.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.lblFuncionarioNascPerfil.Appearance.Options.UseFont = true;
-            this.lblFuncionarioNascPerfil.Location = new System.Drawing.Point(224, 73);
-            this.lblFuncionarioNascPerfil.Name = "lblFuncionarioNascPerfil";
-            this.lblFuncionarioNascPerfil.Size = new System.Drawing.Size(74, 17);
-            this.lblFuncionarioNascPerfil.TabIndex = 18;
-            this.lblFuncionarioNascPerfil.Text = "00/00/0000";
+            this.lblClienteNascPerfilMini.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
+            this.lblClienteNascPerfilMini.Appearance.Options.UseFont = true;
+            this.lblClienteNascPerfilMini.Location = new System.Drawing.Point(224, 73);
+            this.lblClienteNascPerfilMini.Name = "lblClienteNascPerfilMini";
+            this.lblClienteNascPerfilMini.Size = new System.Drawing.Size(74, 17);
+            this.lblClienteNascPerfilMini.TabIndex = 18;
+            this.lblClienteNascPerfilMini.Text = "00/00/0000";
             // 
             // labelControl2
             // 
@@ -240,7 +261,8 @@
             // 
             // imgClientePerfil
             // 
-            this.imgClientePerfil.Location = new System.Drawing.Point(5, 5);
+            this.imgClientePerfil.BackColor = System.Drawing.Color.Transparent;
+            this.imgClientePerfil.Location = new System.Drawing.Point(10, 7);
             this.imgClientePerfil.Name = "imgClientePerfil";
             this.imgClientePerfil.Size = new System.Drawing.Size(113, 151);
             this.imgClientePerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -320,9 +342,9 @@
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panelMiniPerfilCliente);
             this.Controls.Add(this.gridClientes);
-            this.Controls.Add(this.windowsUIButtonPanel2);
+            this.Controls.Add(this.btnPanelClientePMED);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.windowsUIButtonPanel1);
+            this.Controls.Add(this.btnPanelVoltarNovo);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -332,6 +354,7 @@
             this.Name = "form_ClientePrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_ClientePrincipal";
+            this.Click += new System.EventHandler(this.form_ClientePrincipal_Click);
             ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelMiniPerfilCliente)).EndInit();
@@ -347,20 +370,20 @@
 
         #endregion
 
-        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel1;
+        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel btnPanelVoltarNovo;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel2;
+        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel btnPanelClientePMED;
         private DevExpress.XtraGrid.GridControl gridClientes;
         private DevExpress.XtraGrid.Views.Grid.GridView viewClientes;
         private DevExpress.XtraEditors.PanelControl panelMiniPerfilCliente;
         private DevExpress.XtraEditors.LabelControl lblFuncionarioCrmPerfil;
-        private DevExpress.XtraEditors.LabelControl lblFuncionarioCpfPerfil;
+        private DevExpress.XtraEditors.LabelControl lblClienteCpfPerfilMini;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.LabelControl lblFuncionarioTelePerfil;
+        private DevExpress.XtraEditors.LabelControl lblClienteTelePerfilMini;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl lblFuncionarioEmailPerfil;
+        private DevExpress.XtraEditors.LabelControl lblClienteEmailPerfilMini;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl lblFuncionarioNascPerfil;
+        private DevExpress.XtraEditors.LabelControl lblClienteNascPerfilMini;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl lblClienteNomeIdadeMini;
         private System.Windows.Forms.PictureBox imgClientePerfil;

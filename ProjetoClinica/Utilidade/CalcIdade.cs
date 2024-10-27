@@ -16,7 +16,7 @@ namespace ProjetoClinica.Utilidade
             var anoNasc = Convert.ToDateTime(cliente.cl_data_nascimento);
             int anoNascInt = anoNasc.Year;
             int idade = anoAtual - anoNascInt;
-
+                
             if (DateTime.Now < anoNasc.AddYears(idade))
             {
                 idade--;

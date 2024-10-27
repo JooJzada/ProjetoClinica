@@ -19,8 +19,9 @@ namespace ProjetoClinica.Context
         {
         }
 
+        public virtual DbSet<Appointments> Appointments { get; set; }
+        public virtual DbSet<Resources> Resources { get; set; }
         public virtual DbSet<tb_cliente> tb_cliente { get; set; }
-        public virtual DbSet<tb_consultas> tb_consultas { get; set; }
         public virtual DbSet<tb_funcionarios> tb_funcionarios { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -28,25 +29,18 @@ namespace ProjetoClinica.Context
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-UC3Q8T3\\SQLEXPRESS;Initial Catalog=projeto_clinicahospitalar;Persist Security Info=True;User ID=sa;Password=123;Encrypt=True;TrustServerCertificate=True");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-UC3Q8T3\\SQLEXPRESS;Initial Catalog=projeto_clinicahospitalar;Persist Security Info=True;User ID=sa;Password=123;Encrypt=True; TrustServerCertificate=True");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<tb_consultas>(entity =>
+            modelBuilder.Entity<Resources>(entity =>
             {
-                entity.HasOne(d => d.cslt_fk_idclienteNavigation)
-                    .WithMany(p => p.tb_consultas)
-                    .HasForeignKey(d => d.cslt_fk_idcliente)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_tb_consultas_tb_cliente");
-
-                entity.HasOne(d => d.cslt_fk_idmedicoNavigation)
-                    .WithMany(p => p.tb_consultas)
-                    .HasForeignKey(d => d.cslt_fk_idmedico)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_tb_consultas_tb_funcionarios");
+                entity.HasOne(d => d.fk_Fun)
+                    .WithMany(p => p.Resources)
+                    .HasForeignKey(d => d.fk_FunID)
+                    .HasConstraintName("FK_Resources_tb_funcionarios");
             });
 
             OnModelCreatingPartial(modelBuilder);

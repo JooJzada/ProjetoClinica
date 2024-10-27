@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GanttStringId.ColumnsRibbonPageGroupCaption" xml:space="preserve">
+    <value>Colunas</value>
+  </data>
+  <data name="GanttStringId.DefaultFixedPanelCaption" xml:space="preserve">
+    <value>Padrão</value>
+  </data>
+  <data name="GanttStringId.DefaultPanelVisibilityCaption" xml:space="preserve">
+    <value>Padrão</value>
+  </data>
+  <data name="GanttStringId.NoneFixedPanelCaption" xml:space="preserve">
+    <value>Nenhum</value>
+  </data>
+  <data name="GanttStringId.ChartFixedPanelCaption" xml:space="preserve">
+    <value>Gráfico</value>
+  </data>
+  <data name="GanttStringId.ChartPanelVisibilityCaption" xml:space="preserve">
+    <value>Gráfico</value>
+  </data>
+  <data name="GanttStringId.ViewRibbonPageCaption" xml:space="preserve">
+    <value>Vista</value>
+  </data>
+  <data name="GanttStringId.FormatRibbonPageCaption" xml:space="preserve">
+    <value>Formato</value>
+  </data>
+  <data name="GanttStringId.BothPanelsVisibilityCaption" xml:space="preserve">
+    <value>Ambos</value>
+  </data>
+  <data name="GanttStringId.TaskRibbonPageCaption" xml:space="preserve">
+    <value>Tarefa</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewClosePreviewButton" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewGroupClose" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewGroupZoom" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewZoom" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewGroupPrint" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewPrintButton" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewPageSetupButton" xml:space="preserve">
+    <value>Configurar Página</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewZoomInButton" xml:space="preserve">
+    <value>Zoom de Aproximação</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewZoomOutButton" xml:space="preserve">
+    <value>Zoom de Afastamento</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewBestFit" xml:space="preserve">
+    <value>Melhor Ajuste</value>
+  </data>
+  <data name="GanttStringId.PrintLegendTaskItemCaption" xml:space="preserve">
+    <value>Tarefa</value>
+  </data>
+  <data name="GanttStringId.TimelineBarRangeCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="GanttStringId.TimelineBarRangeOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="GanttStringId.TimelineBarRangeFinish" xml:space="preserve">
+    <value>Acabamento</value>
+  </data>
+  <data name="GanttStringId.TimelineBarRangeStart" xml:space="preserve">
+    <value>Início:</value>
+  </data>
+  <data name="GanttStringId.TimelineMenuBarDateRange" xml:space="preserve">
+    <value>Intervalo de datas</value>
+  </data>
+  <data name="GanttStringId.BothPanelsVisibilityDescription" xml:space="preserve">
+    <value>Definir ambos os painéis visíveis</value>
+  </data>
+  <data name="GanttStringId.ChangeAllowResizeCaption" xml:space="preserve">
+    <value>permitem alterar o redimensionado</value>
+  </data>
+  <data name="GanttStringId.ChangeAllowResizeDescription" xml:space="preserve">
+    <value>redimensionado</value>
+  </data>
+  <data name="GanttStringId.ChartFixedPanelDescription" xml:space="preserve">
+    <value>painel fixo</value>
+  </data>
+  <data name="GanttStringId.ChartPanelVisibilityDescription" xml:space="preserve">
+    <value>Definir painel de gráfico visível</value>
+  </data>
+  <data name="GanttStringId.ChartToolsRibbonPageCategoryCaption" xml:space="preserve">
+    <value>Gantt Chart Ferramentas</value>
+  </data>
+  <data name="GanttStringId.ChooseFixedPanelCaption" xml:space="preserve">
+    <value>painel fixo</value>
+  </data>
+  <data name="GanttStringId.ChooseFixedPanelDescription" xml:space="preserve">
+    <value>fixo</value>
+  </data>
+  <data name="GanttStringId.ChoosePanelVisibilityCaption" xml:space="preserve">
+    <value>visibilidade</value>
+  </data>
+  <data name="GanttStringId.ChoosePanelVisibilityDescription" xml:space="preserve">
+    <value>escolher painéis visíveis</value>
+  </data>
+  <data name="GanttStringId.DefaultFixedPanelDescription" xml:space="preserve">
+    <value>estado</value>
+  </data>
+  <data name="GanttStringId.DefaultPanelVisibilityDescription" xml:space="preserve">
+    <value>painel</value>
+  </data>
+  <data name="GanttStringId.HalfYearFormat" xml:space="preserve">
+    <value>H{0}</value>
+  </data>
+  <data name="GanttStringId.InteractionTooltipFinishCaption" xml:space="preserve">
+    <value>TAREFAS</value>
+  </data>
+  <data name="GanttStringId.InteractionTooltipPredecessorCaption" xml:space="preserve">
+    <value>DO ANTECESSOR DE TÉRMINO</value>
+  </data>
+  <data name="GanttStringId.InteractionTooltipProgressCaption" xml:space="preserve">
+    <value>Progresso</value>
+  </data>
+  <data name="GanttStringId.InteractionTooltipStartCaption" xml:space="preserve">
+    <value>DE</value>
+  </data>
+  <data name="GanttStringId.InteractionTooltipSuccessorCaption" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="GanttStringId.LongHalfYearFormat" xml:space="preserve">
+    <value>{0}, {1}</value>
+  </data>
+  <data name="GanttStringId.LongQuarterFormat" xml:space="preserve">
+    <value>Qtr {0}, {1}</value>
+  </data>
+  <data name="GanttStringId.NoneFixedPanelDescription" xml:space="preserve">
+    <value>painel fixo</value>
+  </data>
+  <data name="GanttStringId.PrintLegendProgressItemCaption" xml:space="preserve">
+    <value>Progresso</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewInfoLabel" xml:space="preserve">
+    <value>Nada</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewPrintQuickButton" xml:space="preserve">
+    <value>Imprimir rápido</value>
+  </data>
+  <data name="GanttStringId.PrintPreviewStopOperationButton" xml:space="preserve">
+    <value>Pare</value>
+  </data>
+  <data name="GanttStringId.QuarterFormat" xml:space="preserve">
+    <value>Q{0}</value>
+  </data>
+  <data name="GanttStringId.ScheduleRibbonPageGroupCaption" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+  <data name="GanttStringId.ShowHorzLinesCaption" xml:space="preserve">
+    <value>mostram linhas horizontais</value>
+  </data>
+  <data name="GanttStringId.ShowHorzLinesDescription" xml:space="preserve">
+    <value>mostram linhas horizontais</value>
+  </data>
+  <data name="GanttStringId.SplitViewRibbonPageGroupCaption" xml:space="preserve">
+    <value>dividir vista</value>
+  </data>
+  <data name="GanttStringId.TreeFixedPanelCaption" xml:space="preserve">
+    <value>árvore </value>
+  </data>
+  <data name="GanttStringId.TreeFixedPanelDescription" xml:space="preserve">
+    <value>Set Tree Fixed Panel</value>
+  </data>
+  <data name="GanttStringId.TreePanelVisibilityCaption" xml:space="preserve">
+    <value>árvore </value>
+  </data>
+  <data name="GanttStringId.TreePanelVisibilityDescription" xml:space="preserve">
+    <value>Definir painel de árvore visível</value>
+  </data>
+</root>

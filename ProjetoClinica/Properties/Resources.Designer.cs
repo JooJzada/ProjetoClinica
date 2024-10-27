@@ -63,9 +63,29 @@ namespace ProjetoClinica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imagem_2024_10_11_085113537_removebg_preview {
+        internal static System.Drawing.Bitmap Fundo_Projeto_Clinica {
             get {
-                object obj = ResourceManager.GetObject("imagem_2024-10-11_085113537-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("Fundo Projeto Clinica", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icone_Projeto_Clinica {
+            get {
+                object obj = ResourceManager.GetObject("Icone_Projeto_Clinica", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImagemPadrao {
+            get {
+                object obj = ResourceManager.GetObject("ImagemPadrao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

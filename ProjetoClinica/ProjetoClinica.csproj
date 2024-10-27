@@ -42,11 +42,16 @@
     <Reference Include="DevExpress.Printing.v24.1.Core, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.TreeMap.v24.1.Core, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1.Core, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1.Core.Desktop, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1.Extensions, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeMap.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeMap.v24.1.UI, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraWizard.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -122,6 +127,15 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.5.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.2849.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2849.39\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.2849.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2849.39\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.2849.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2849.39\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -136,6 +150,7 @@
       <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
@@ -173,6 +188,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1-Tela Inicial\form_AgendaCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1-Tela Inicial\form_AgendaCalendario.Designer.cs">
+      <DependentUpon>form_AgendaCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarioDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clientes\form_ClienteAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +211,12 @@
     <Compile Include="Clientes\form_ClienteEditar.Designer.cs">
       <DependentUpon>form_ClienteEditar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clientes\form_ClientePerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\form_ClientePerfil.Designer.cs">
+      <DependentUpon>form_ClientePerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes\form_ClientePrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +224,7 @@
       <DependentUpon>form_ClientePrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Context\projeto_clinicaContext.cs" />
+    <Compile Include="Enum\EnumGlobal.cs" />
     <Compile Include="Funcionários\form_FuncionarioAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,8 +249,27 @@
     <Compile Include="Funcionários\form_FuncionarioPrincipal.Designer.cs">
       <DependentUpon>form_FuncionarioPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Funcionários\Login\form_LoginReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionários\Login\form_LoginReg.Designer.cs">
+      <DependentUpon>form_LoginReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\form_Login.Designer.cs">
+      <DependentUpon>form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medico\form_AgendaPessoal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medico\form_AgendaPessoal.Designer.cs">
+      <DependentUpon>form_AgendaPessoal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Appointments.cs" />
+    <Compile Include="Models\Resources.cs" />
     <Compile Include="Models\tb_cliente.cs" />
-    <Compile Include="Models\tb_consultas.cs" />
     <Compile Include="Models\tb_funcionarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -227,13 +279,42 @@
     <Compile Include="1-Tela Inicial\form_TelaInicial.Designer.cs">
       <DependentUpon>form_TelaInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Utilidade\CalcIdade.cs" />
     <Compile Include="Utilidade\ConversorImagem.cs" />
+    <Compile Include="Utilidade\VerificadorAcesso.cs" />
+    <Compile Include="XPO\projeto_clinicahospitalarCode\Appointmentsxpo.cs" />
+    <Compile Include="XPO\projeto_clinicahospitalarCode\Appointmentsxpo.Designer.cs">
+      <DependentUpon>Appointmentsxpo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XPO\projeto_clinicahospitalarCode\ConnectionHelper.cs" />
+    <Compile Include="XPO\projeto_clinicahospitalarCode\Resourcesxpo.cs" />
+    <Compile Include="XPO\projeto_clinicahospitalarCode\Resourcesxpo.Designer.cs">
+      <DependentUpon>Resourcesxpo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XPO\projeto_clinicahospitalarCode\tb_clientexpo.cs" />
+    <Compile Include="XPO\projeto_clinicahospitalarCode\tb_clientexpo.Designer.cs">
+      <DependentUpon>tb_clientexpo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XPO\projeto_clinicahospitalarCode\tb_funcionariosxpo.cs" />
+    <Compile Include="XPO\projeto_clinicahospitalarCode\tb_funcionariosxpo.Designer.cs">
+      <DependentUpon>tb_funcionariosxpo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="1-Tela Inicial\form_AgendaCalendario.resx">
+      <DependentUpon>form_AgendaCalendario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes\form_ClienteAdd.resx">
       <DependentUpon>form_ClienteAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\form_ClienteEditar.resx">
       <DependentUpon>form_ClienteEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\form_ClientePerfil.resx">
+      <DependentUpon>form_ClientePerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\form_ClientePrincipal.resx">
       <DependentUpon>form_ClientePrincipal.cs</DependentUpon>
@@ -254,17 +335,32 @@
       <DependentUpon>form_TelaInicial.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Funcionários\Login\form_LoginReg.resx">
+      <DependentUpon>form_LoginReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\form_Login.resx">
+      <DependentUpon>form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medico\form_AgendaPessoal.resx">
+      <DependentUpon>form_AgendaPessoal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <None Include="CalendarioDataSet.xsc">
+      <DependentUpon>CalendarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CalendarioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CalendarioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CalendarioDataSet.xss">
+      <DependentUpon>CalendarioDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -275,12 +371,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="XPO\projeto_clinicahospitalar.xpo" />
+    <None Include="XPO\projeto_clinicahospitalar.xpo.diagram">
+      <DependentUpon>projeto_clinicahospitalar.xpo</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\imagem_2024-10-11_085113537-removebg-preview.png" />
+    <None Include="Resources\Fundo Projeto Clinica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImagemPadrao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icone Projeto Clinica.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -290,5 +396,7 @@
       <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.2849.39\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.2849.39\build\Microsoft.Web.WebView2.targets'))" />
   </Target>
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.2849.39\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.2849.39\build\Microsoft.Web.WebView2.targets')" />
 </Project>

@@ -15,19 +15,27 @@
             }
             base.Dispose(disposing);
         }
-
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarSubItem barFuncionarioMenu;
         private DevExpress.XtraBars.BarButtonItem btnFuncionarioPrincipalMenu;
         private DevExpress.XtraBars.BarButtonItem btnFuncionarioAddMenu;
         private DevExpress.XtraBars.BarSubItem barSubItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barBtnAgenda;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraEditors.PanelControl pnlAgenda;
+        private DevExpress.XtraScheduler.SchedulerControl schedulerControl1;
+        private DevExpress.XtraScheduler.SchedulerDataStorage schedulerDataStorage1;
+        private CalendarioDataSet calendarioDataSet;
+        private System.Windows.Forms.BindingSource appointmentsBindingSource;
+        private CalendarioDataSetTableAdapters.AppointmentsTableAdapter appointmentsTableAdapter;
+        private System.Windows.Forms.BindingSource resourcesBindingSource;
+        private CalendarioDataSetTableAdapters.ResourcesTableAdapter resourcesTableAdapter;
     }
 }

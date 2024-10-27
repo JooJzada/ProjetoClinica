@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Job_InvalidParameterValue" xml:space="preserve">
+    <value>'{0}' não é válido. Ocorreu o seguinte erro: {1}</value>
+  </data>
+  <data name="TestEmail_MissingAddress" xml:space="preserve">
+    <value>Não pode enviar um e-mail de teste, porque você não especificou um endereço de e-mail. Por favor, atualize suas informações de perfil de usuário.</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Acesso negado.</value>
+  </data>
+  <data name="Account_CannotActivate_LicenseLimit" xml:space="preserve">
+    <value>Aumentar o limite de licença de acesso para cliente para ativar a conta.</value>
+  </data>
+  <data name="Account_CannotCreate" xml:space="preserve">
+    <value>Não é possível criar a conta. {0}</value>
+  </data>
+  <data name="Account_CannotCreate_ConfigureSmtp" xml:space="preserve">
+    <value>Não é possível criar a conta. Por favor, configure as configurações SMTP.</value>
+  </data>
+  <data name="Account_CannotCreate_LicenseLimit" xml:space="preserve">
+    <value>Não é possível criar a conta. Atingiu seu limite de contagem de licença {0}.</value>
+  </data>
+  <data name="Account_CannotDeactivate_Self" xml:space="preserve">
+    <value>Você não pode desactivar a sua conta.</value>
+  </data>
+  <data name="Account_CannotDelete_HasDocumentRevisions" xml:space="preserve">
+    <value>Não é possível excluir uma conta de usuário que tem as revisões de documento.</value>
+  </data>
+  <data name="Account_CannotDelete_HasLockedDocuments" xml:space="preserve">
+    <value>Não é possível excluir uma conta de usuário que tenha bloqueado documentos.</value>
+  </data>
+  <data name="Account_CannotDelete_LastAdmin" xml:space="preserve">
+    <value>Não é possível excluir uma conta de usuário, porque é o último administrador para o modo de autenticação selecionado.</value>
+  </data>
+  <data name="Account_CannotDelete_Self" xml:space="preserve">
+    <value>Não é possível excluir sua conta.</value>
+  </data>
+  <data name="Account_CannotDelete_Self_FromAdminGroup" xml:space="preserve">
+    <value>Você não pode remover sua conta do grupo Administradores de sistema do usuário.</value>
+  </data>
+  <data name="Account_CannotSave_ModifiedByAnotherUser" xml:space="preserve">
+    <value>Não é possível salvar a conta de usuário porque outro usuário já modificou lo</value>
+  </data>
+  <data name="Account_Disabled" xml:space="preserve">
+    <value>Um administrador desabilitada esta conta de usuário.</value>
+  </data>
+  <data name="Account_DomainName_IsRequired" xml:space="preserve">
+    <value>Por favor, digite um nome de conta de usuário no formato DOMAIN\login.</value>
+  </data>
+  <data name="Account_Email_IsRequired" xml:space="preserve">
+    <value>Endereço de e-mail é necessário.</value>
+  </data>
+  <data name="Account_Guest_CannotDeleteOrModify" xml:space="preserve">
+    <value>Conta o convidado não pode ser modificada ou excluída.</value>
+  </data>
+  <data name="Account_InvalidOrDisabled" xml:space="preserve">
+    <value>Conta não existe ou foi desabilitada pelo administrador.</value>
+  </data>
+  <data name="Account_LicenseLimitExceeded" xml:space="preserve">
+    <value>Atingiu seu limite de contagem de licença de {0}.</value>
+  </data>
+  <data name="Account_Pending_CannotUpdate" xml:space="preserve">
+    <value>Não é possível atualizar uma conta de usuário pendente.</value>
+  </data>
+  <data name="Account_UnexpectedType" xml:space="preserve">
+    <value>Tipo de conta inesperada: {0}.</value>
+  </data>
+  <data name="Account_UsernameAlreadyExists" xml:space="preserve">
+    <value>Já existe uma conta com o mesmo nome de usuário ou email.</value>
+  </data>
+  <data name="Account_UsernameReserved" xml:space="preserve">
+    <value>Esse nome de usuário é reservado.</value>
+  </data>
+  <data name="BillingStatement_Binding_IsRequired" xml:space="preserve">
+    <value>Ligação de uma declaração faturamento é necessária.</value>
+  </data>
+  <data name="BillingStatement_DataMember_IsRequired" xml:space="preserve">
+    <value>Membro de dados é necessário.</value>
+  </data>
+  <data name="BillingStatement_DataMember_NotFound" xml:space="preserve">
+    <value>Membro de dados '{0}' não existe no modelo de dados '{1}'.</value>
+  </data>
+  <data name="BillingStatement_Email_IsRequired" xml:space="preserve">
+    <value>Campo de endereço de email é necessário.</value>
+  </data>
+  <data name="BillingStatement_InvalidEmail" xml:space="preserve">
+    <value>Campo de endereço de email '{0}' não existe no membro de dados '{1}'.</value>
+  </data>
+  <data name="BillingStatement_InvalidEmailRecipient" xml:space="preserve">
+    <value>Campo de destinatário de e-mail '{0}' não existe no membro de dados '{1}'.</value>
+  </data>
+  <data name="Dashboard_Layout_ContainsUnsupportedDataSources" xml:space="preserve">
+    <value>Não pode abrir o painel de controle, porque contém os tipos de fonte de dados sem suporte.</value>
+  </data>
+  <data name="Dashboard_Layout_Corrupted" xml:space="preserve">
+    <value>Layout de painel corrompido.</value>
+  </data>
+  <data name="DataModel_CannotSave_ModifiedByAnotherUser" xml:space="preserve">
+    <value>Não é possível salvar o modelo de dados porque outro usuário já modificou lo</value>
+  </data>
+  <data name="DataModel_DuplicateProcedureName" xml:space="preserve">
+    <value>Modelo de dados já contém um procedimento armazenado com o mesmo nome: {0}.</value>
+  </data>
+  <data name="DataModel_DuplicateQueryName" xml:space="preserve">
+    <value>Modelo de dados já contém uma consulta com o mesmo nome: {0}.</value>
+  </data>
+  <data name="DataModel_DuplicateTableName" xml:space="preserve">
+    <value>Modelo de dados já contém uma tabela com o mesmo nome: {0}.</value>
+  </data>
+  <data name="DataModel_DuplicateViewName" xml:space="preserve">
+    <value>Modelo de dados já contém um modo de exibição com o mesmo nome: {0}.</value>
+  </data>
+  <data name="DataModel_Name_Exists" xml:space="preserve">
+    <value>Um modelo de dados com o mesmo nome já existe: {0}.</value>
+  </data>
+  <data name="DataModel_Name_NotFound" xml:space="preserve">
+    <value>Não pode encontrar o modelo de dados: {0}</value>
+  </data>
+  <data name="DataModel_NotFound" xml:space="preserve">
+    <value>Não pode encontrar o modelo de dados.</value>
+  </data>
+  <data name="Document_CannotRemove_UsedByJob" xml:space="preserve">
+    <value>Não é possível remover um documento que está sendo usado por um trabalho agendado.</value>
+  </data>
+  <data name="Document_CannotRollbackToRevision" xml:space="preserve">
+    <value>Não pode executar reversão: revisão de destino corresponde a revisão mais recente do documento.</value>
+  </data>
+  <data name="Document_CannotSave_ModifiedByAnotherUser" xml:space="preserve">
+    <value>Não pode salvar o documento, porque outro usuário já modificou lo</value>
+  </data>
+  <data name="Document_Category_CannotDelete_NotEmpty" xml:space="preserve">
+    <value>Não é possível excluir uma categoria que contenha documentos.</value>
+  </data>
+  <data name="Document_Category_CannotSave_ModifiedByAnotherUser" xml:space="preserve">
+    <value>Não é possível salvar a categoria de documento porque outro usuário já modificou lo</value>
+  </data>
+  <data name="Document_Category_Name_Exists" xml:space="preserve">
+    <value>Já existe uma categoria com o mesmo nome: {0}</value>
+  </data>
+  <data name="Document_Category_Name_IsRequired" xml:space="preserve">
+    <value>Nome da categoria é necessário.</value>
+  </data>
+  <data name="Document_Category_Name_TooLong" xml:space="preserve">
+    <value>Nome da categoria é muito tempo</value>
+  </data>
+  <data name="Document_Category_NotFound" xml:space="preserve">
+    <value>Não pode encontrar categoria.</value>
+  </data>
+  <data name="Document_CheckedOutBy" xml:space="preserve">
+    <value>Documento é examinado por {0}.</value>
+  </data>
+  <data name="Document_Description_TooLong" xml:space="preserve">
+    <value>Descrição do documento é também muito tempo</value>
+  </data>
+  <data name="Document_Locked" xml:space="preserve">
+    <value>Bloqueio de documento é propriedade de outro usuário.</value>
+  </data>
+  <data name="Document_LockedBy" xml:space="preserve">
+    <value>Documento já está bloqueado por {0}.</value>
+  </data>
+  <data name="Document_Name_Exists" xml:space="preserve">
+    <value>Um documento com o mesmo nome já existe: {0}.</value>
+  </data>
+  <data name="Document_Name_IsRequired" xml:space="preserve">
+    <value>Nome do documento é necessária.</value>
+  </data>
+  <data name="Document_Name_TooLong" xml:space="preserve">
+    <value>Nome do documento é também muito tempo</value>
+  </data>
+  <data name="Document_NotCheckedOut" xml:space="preserve">
+    <value>Documento não check-out.</value>
+  </data>
+  <data name="Document_NotFound" xml:space="preserve">
+    <value>Não pode localizar o documento.</value>
+  </data>
+  <data name="Document_Revision_NotFound" xml:space="preserve">
+    <value>Não consigo encontrar a revisão do documento.</value>
+  </data>
+  <data name="Document_RevisionComment_TooLong" xml:space="preserve">
+    <value>Comentário de revisão do documento é também muito tempo</value>
+  </data>
+  <data name="Document_RolledBackToRevision" xml:space="preserve">
+    <value>Rolled voltar à revisão '{0}'.</value>
+  </data>
+  <data name="EndDateCantBeLessThanStartDate" xml:space="preserve">
+    <value>a data final não pode ser inferior a data de início.</value>
+  </data>
+  <data name="EndDateMissing" xml:space="preserve">
+    <value>Data de término de Missing.</value>
+  </data>
+  <data name="EndDateMustBeGreaterThan" xml:space="preserve">
+    <value>Data final deve ser maior que {0}.</value>
+  </data>
+  <data name="Group_CannotDeleteAdmin" xml:space="preserve">
+    <value>Não é possível excluir Grupo: administradores de sistema.</value>
+  </data>
+  <data name="Group_CannotSave_ModifiedByAnotherUser" xml:space="preserve">
+    <value>Não pode salvar o grupo de usuário porque outro usuário já modificou lo</value>
+  </data>
+  <data name="Group_Name_Exists" xml:space="preserve">
+    <value>Um grupo com o mesmo nome já existe: {0}.</value>
+  </data>
+  <data name="Group_Name_IsRequired" xml:space="preserve">
+    <value>Nome do grupo é necessário.</value>
+  </data>
+  <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>Nome de usuário inválido ou senha.</value>
+  </data>
+  <data name="Job_CannotChangeMode" xml:space="preserve">
+    <value>Não pode alterar o tipo de trabalho, após o trabalho tiver sido inicializado.</value>
+  </data>
+  <data name="Job_CannotSave_ModifiedByAnotherUser" xml:space="preserve">
+    <value>Não pode salvar o emprego porque outro usuário já modificou lo</value>
+  </data>
+  <data name="Job_InvalidDashboardDeliveryFormat" xml:space="preserve">
+    <value>Formato de entrega de documento inválido para um painel de controle.</value>
+  </data>
+  <data name="Job_InvalidParameterValue_GenericError" xml:space="preserve">
+    <value>'{0}' o valor do parâmetro não é válido.</value>
+  </data>
+  <data name="Job_InvalidRecurrenceType" xml:space="preserve">
+    <value>Tipo de recorrência inválido: {0}</value>
+  </data>
+  <data name="Job_InvalidRetentionPeriod" xml:space="preserve">
+    <value>Valor de período de retenção inválido.</value>
+  </data>
+  <data name="Job_InvalidSharedFolder" xml:space="preserve">
+    <value>Inválido pasta compartilhada: {0}</value>
+  </data>
+  <data name="Job_Log_NotFound" xml:space="preserve">
+    <value>Não consigo encontrar o log de trabalho.</value>
+  </data>
+  <data name="Job_Name_Exists" xml:space="preserve">
+    <value>Um trabalho com o mesmo nome já existe: {0}.</value>
+  </data>
+  <data name="Job_Name_IsRequired" xml:space="preserve">
+    <value>Nome do trabalho é necessário.</value>
+  </data>
+  <data name="Job_NotFound" xml:space="preserve">
+    <value>Não consegue encontrar emprego.</value>
+  </data>
+  <data name="Job_Result_NotFound" xml:space="preserve">
+    <value>Não consigo encontrar o resultado do trabalho.</value>
+  </data>
+  <data name="Object_NotFound" xml:space="preserve">
+    <value>Não pode localizar o objeto.</value>
+  </data>
+  <data name="Permissions_CannotDelete_AssignedToDiffetrentGroups" xml:space="preserve">
+    <value>Não é possível excluir permissões atribuídas a vários grupos de usuários.</value>
+  </data>
+  <data name="Permissions_CannotDelete_AssignedToDiffetrentUsers" xml:space="preserve">
+    <value>Não é possível excluir permissões atribuídas a vários usuários.</value>
+  </data>
+  <data name="Permissions_CannotUse_WithSpecificEntity" xml:space="preserve">
+    <value>'Criar' permissão não pode ser usado com o escopo de 'entidade específica'.</value>
+  </data>
+  <data name="Permissions_Exist" xml:space="preserve">
+    <value>a permissão especificada já existe.</value>
+  </data>
+  <data name="Permissions_NotAssignedToGroup" xml:space="preserve">
+    <value>Sem permissões atribuídas ao grupo de usuário especificado.</value>
+  </data>
+  <data name="Permissions_NotAssignedToUser" xml:space="preserve">
+    <value>Sem permissões atribuídas ao usuário especificado.</value>
+  </data>
+  <data name="Permissions_Required" xml:space="preserve">
+    <value>Pelo menos uma permissão deve ser adicionada.</value>
+  </data>
+  <data name="Report_CodeDomFormat_NotSupported" xml:space="preserve">
+    <value>o formato de layout de relatório de CodeDOM herdado não é suportado.</value>
+  </data>
+  <data name="Report_DataSource_Updated" xml:space="preserve">
+    <value>Sua versão de fonte de dados de relatório tem sido updated.\r\nPlease certifique-se de que seu script faz referência a nova fonte de dados.</value>
+  </data>
+  <data name="Report_Layout_ContainsUnsupportedDataSources" xml:space="preserve">
+    <value>Não pode abrir o relatório, porque contém os tipos de fonte de dados sem suporte.</value>
+  </data>
+  <data name="Report_Layout_Corrupted" xml:space="preserve">
+    <value>Layout de relatório corrompido.</value>
+  </data>
+  <data name="Report_Layout_InvalidFormat" xml:space="preserve">
+    <value>Formato de layout de relatório inválido.</value>
+  </data>
+  <data name="Report_LegacyDataSource_AutoUpgrade" xml:space="preserve">
+    <value>os dados utilizado no presente relatório foi criado com uma versão mais antiga do relatório e painel de controle de servidor.
+
+Okey clique para atualizar esta fonte de dados automaticamente.</value>
+  </data>
+  <data name="Report_LegacyDataSource_Title" xml:space="preserve">
+    <value>Este relatório usa uma versão mais antiga de fonte de dados.</value>
+  </data>
+  <data name="Scheduler_NoConnectionToWorker" xml:space="preserve">
+    <value>Nenhuma conexão para um serviço do trabalhador.</value>
+  </data>
+  <data name="SelfSignUp_UserGroup_DoesNotExist" xml:space="preserve">
+    <value>Um grupo de usuários para auto inscrição registro não existe.</value>
+  </data>
+  <data name="Server_Address_Invalid" xml:space="preserve">
+    <value>Formato de endereço de servidor inválido.</value>
+  </data>
+  <data name="Server_Address_InvalidScheme" xml:space="preserve">
+    <value>o esquema de endereço de servidor deve ser 'HTTP' ou 'HTTPS'.</value>
+  </data>
+  <data name="Server_Error" xml:space="preserve">
+    <value>Erro de servidor.</value>
+  </data>
+  <data name="Server_InvalidUserActivationExpiration" xml:space="preserve">
+    <value>Expiração de ativação de usuário deve ser maior que 0.</value>
+  </data>
+  <data name="Settings_AuthMode_MissingAdmin" xml:space="preserve">
+    <value>Não é possível alterar os métodos de autenticação de servidor. Certifique-se que há pelo menos uma conta ativa com privilégios de administrador.</value>
+  </data>
+  <data name="Settings_Smtp_UnknownHost" xml:space="preserve">
+    <value>o nome do host SMTP especificado não é um nome DNS válido.</value>
+  </data>
+  <data name="StartDateMissing" xml:space="preserve">
+    <value>Data de início de Missing.</value>
+  </data>
+  <data name="StartDateMustBeGreaterThan" xml:space="preserve">
+    <value>Data de início deve ser maior que {0}.</value>
+  </data>
+  <data name="TestEmail_Body" xml:space="preserve">
+    <value>.
+
+Este é um e-mail de teste do relatório e Dashboard Server.</value>
+  </data>
+  <data name="TestEmail_Sent" xml:space="preserve">
+    <value>Uma mensagem de e-mail de teste foi enviada para seu endereço.</value>
+  </data>
+  <data name="TestEmail_Subject" xml:space="preserve">
+    <value>Relatório e notificação do servidor Dashboard</value>
+  </data>
+  <data name="Theme_CannotSave_ModifiedByAnotherUser" xml:space="preserve">
+    <value>Não pode salvar o tema porque outro usuário já modificou lo</value>
+  </data>
+  <data name="Title_DashboardDesigner" xml:space="preserve">
+    <value>Dashboard Designer</value>
+  </data>
+  <data name="Title_DashboardViewer" xml:space="preserve">
+    <value>Dashboard Viewer</value>
+  </data>
+  <data name="Title_NewReport" xml:space="preserve">
+    <value>Novo relatório</value>
+  </data>
+  <data name="Title_ReportPreview" xml:space="preserve">
+    <value>Visualização de relatório</value>
+  </data>
+  <data name="Title_ReportServer" xml:space="preserve">
+    <value>Relatório e servidor Dashboard</value>
+  </data>
+  <data name="UserName_Exists" xml:space="preserve">
+    <value>Uma conta com esse nome de usuário já existe.</value>
+  </data>
+  <data name="Wcf_MinimumClientVersion" xml:space="preserve">
+    <value>é a versão de cliente com suporte mínimo {0}.</value>
+  </data>
+  <data name="Worker_Fail_GetReportParameterLookupValues" xml:space="preserve">
+    <value>Não foi possível obter o parâmetro aparência de valores com a seguinte exceção: {0}</value>
+  </data>
+  <data name="Worker_Fail_GetReportParameterValues" xml:space="preserve">
+    <value>Falhou ao obter relatório valores de parâmetro com a seguinte exceção: {0}</value>
+  </data>
+  <data name="Worker_InvalidParameterValue" xml:space="preserve">
+    <value>inválido para parâmetro '{0}'. Erro: {1}.</value>
+  </data>
+  <data name="Worker_Report_MissingSubreports" xml:space="preserve">
+    <value>o relatório que você está tentando Visualizar contém um ou mais sub-relatórios que não existe no relatório e Dashboard Server.</value>
+  </data>
+  <data name="Worker_UnknownReportIdentifier" xml:space="preserve">
+    <value>Identificador de relatório desconhecido: {0}.</value>
+  </data>
+</root>

@@ -1,16 +1,48 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 using System.Windows.Forms;
+using DevExpress.Xpo.DB;
+using ProjetoClinica.Enum;
+using ProjetoClinica.Login;
+using ProjetoClinica.Medico;
+using ProjetoClinica.Models;
+using ProjetoClinica.XPO.Database;
 
-namespace ProjetoClinica {
-    internal static class Program {
-        /// <summary>
-        /// Ponto de entrada principal para o aplicativo.
-        /// </summary>
+
+namespace ProjetoClinica
+{
+    internal static class Program
+    {
+
+        static public bool isLogged { get; set; }
+        static public tb_funcionarios usuarioLogado { get; set; }
+
         [STAThread]
-        static void Main() {
+        static void Main()
+        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new form_TelaInicial());
+            ConnectionHelper.Connect(AutoCreateOption.None);
+
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("pt-BR");
+
+            form_Login formLogin = new form_Login();
+            formLogin.ShowDialog();
+
+
+            if (isLogged == false)
+            {
+                return;
+            }
+
+            if (Program.usuarioLogado.fun_CargoPrimario == nameof(EnumGlobal.NivelAcesso.Médico)) //Fazer um IF Replace para não ficar essa feiura
+            {
+                form_AgendaPessoal agendaPessoal = new form_AgendaPessoal();
+                agendaPessoal.ShowDialog();
+            } else
+                Application.Run(new form_TelaInicial());
+
         }
     }
 }

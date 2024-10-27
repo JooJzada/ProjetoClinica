@@ -34,7 +34,10 @@ namespace ProjetoClinica.Clientes
                 txtClienteCPF.Text = cliente.cl_cpf;
                 txtClienteTelefone.Text = cliente.cl_telefone;
                 txtClientePlano.Text = cliente.cl_plano;
-                imgCliente.Image = ConversorImagem.ConvertByteArrayToImg(cliente.cl_foto);
+                if (cliente.cl_foto != null)
+                {
+                    imgCliente.Image = ConversorImagem.ConvertByteArrayToImg(cliente.cl_foto);
+                }
             }
         }
 

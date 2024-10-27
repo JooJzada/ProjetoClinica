@@ -2,11 +2,14 @@
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraBars.Docking2010;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using ProjetoClinica.Context;
 using ProjetoClinica.Models;
 using DevExpress.XtraEditors;
+using ProjetoClinica.Properties;
+using ProjetoClinica.Utilidade;
 
 namespace ProjetoClinica.Clientes
 {
@@ -14,12 +17,13 @@ namespace ProjetoClinica.Clientes
     {
 
         projeto_clinicaContext context = new projeto_clinicaContext();
-        
+
         public form_ClientePrincipal()
         {
             InitializeComponent();
             CarregarTabelaClientes();
         }
+
         public void CarregarTabelaClientes()
         {
             LinqInstantFeedbackSource linqInstantFeedbackSource = new LinqInstantFeedbackSource();
@@ -49,18 +53,7 @@ namespace ProjetoClinica.Clientes
             e.QueryableSource = query;
         }
 
-        private void viewClientes_RowClick(object sender, RowClickEventArgs e)
-        {
-            GridView view = sender as GridView;
-
-            if (e.RowHandle >= 0)
-            {
-                var linhaSelecionada = view.GetRowCellValue(e.RowHandle, "cl_id");
-                int idCliente = Convert.ToInt32(linhaSelecionada);
-                MessageBox.Show(Convert.ToString(idCliente));
-            }
-
-        }
+   
 
         private void viewClientes_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
         {
@@ -81,7 +74,7 @@ namespace ProjetoClinica.Clientes
 
             clienteEditar.ShowDialog();
             CarregarTabelaClientes();
-            
+
         }
 
         private void popupClienteDeletar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -89,16 +82,130 @@ namespace ProjetoClinica.Clientes
             var linhaSelecionada = viewClientes.GetFocusedRowCellValue("cl_id");
             int idCliente = Convert.ToInt32(linhaSelecionada);
 
-            using (projeto_clinicaContext context = new projeto_clinicaContext())
-            {
-                var cliente = context.tb_cliente.Find(idCliente);
-                context.tb_cliente.Remove(cliente);
-                context.SaveChanges();
+            DialogResult result = XtraMessageBox.Show("Tem certeza que deseja deletar?", "Aviso",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
 
-                XtraMessageBox.Show("Cliente deletado com sucesso!", "Sucesso", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+
+
+            if (result == DialogResult.Yes)
+            {
+                using (projeto_clinicaContext context = new projeto_clinicaContext())
+                {
+                    var cliente = context.tb_cliente.Find(idCliente);
+                    context.tb_cliente.Remove(cliente);
+                    context.SaveChanges();
+
+                    XtraMessageBox.Show("Cliente deletado com sucesso!", "Sucesso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    panelMiniPerfilCliente.Visible = false;
+                    CarregarTabelaClientes();
+                   form_ClientePrincipal_Click(sender, e);
+                }
+
+            }
+
+
+        }
+
+        private void viewClientes_RowCellClick(object sender, RowCellClickEventArgs e)
+        {
+            var linhaId = viewClientes.GetFocusedRowCellValue("cl_id");
+            var cliente = context.tb_cliente.FirstOrDefault(p => p.cl_id == (int)linhaId);
+
+            if (cliente != null)
+            {
+
+                lblClienteNomeIdadeMini.Text = $"{cliente.cl_nome}, {CalcIdade.CalcularIdadeCliente(cliente.cl_id)}";
+                lblClienteCpfPerfilMini.Text = cliente.cl_cpf;
+                lblClienteEmailPerfilMini.Text = cliente.cl_email;
+                lblClienteNascPerfilMini.Text = cliente.cl_data_nascimento;
+                lblClienteTelePerfilMini.Text = cliente.cl_telefone;
+
+                if (cliente.cl_foto[0] == 0x00)
+                {
+                    imgClientePerfil.Image = Properties.Resources.ImagemPadrao;
+                } else
+                {
+                    imgClientePerfil.Image = ConversorImagem.ConvertByteArrayToImg(cliente.cl_foto);
+                }
+
+                
+                panelMiniPerfilCliente.Visible = true;
+                btnPanelClientePMED.Visible = true;
+                //imgClientePerfil.Image = cliente.cl_foto == null ? Properties.Resources.ImagemPadrao : ConversorImagem.ConvertByteArrayToImg(cliente.cl_foto);
+            } else
+            {
+                panelMiniPerfilCliente.Visible = false;
+                btnPanelClientePMED.Visible = false;
+            }
+
+
+
+
+            //using (projeto_clinicaContext context = new projeto_clinicaContext())
+            //{
+            //    var cliente = context.tb_cliente.Find(idCliente);
+
+            //    lblClienteNomeIdadeMini.Text = $"{cliente.cl_nome}, {CalcIdade.CalcularIdadeCliente(cliente.cl_id)}";
+
+            //}
+        }
+
+        private void btnPanelVoltarNovo_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
+        {
+            WindowsUIButton btn = e.Button as WindowsUIButton;
+
+            if (btn != null && btn.Tag.Equals("Voltar"))
+            {
+                this.Close();
+            }
+
+            if (btn != null && btn.Tag.Equals("Novo"))
+            {
+                form_ClienteAdd clienteAdd = new form_ClienteAdd();
+                clienteAdd.ShowDialog();
                 CarregarTabelaClientes();
             }
+
+
         }
+
+        private void btnPanelClientePMED_ButtonClick(object sender, ButtonEventArgs e)
+        {
+            var linhaSelecionada = viewClientes.GetFocusedRowCellValue("cl_id");
+            int idCliente = Convert.ToInt32(linhaSelecionada);
+
+
+            WindowsUIButton btn = e.Button as WindowsUIButton;
+
+            if (btn != null && btn.Tag.Equals("Perfil"))
+            {
+                form_ClientePerfil clientePerfil = new form_ClientePerfil();
+                clientePerfil.ClienteID = idCliente;
+                clientePerfil.ShowDialog();
+            }
+
+            if (btn != null && btn.Tag.Equals("Editar"))
+            {
+                popupClienteEditar.PerformClick();
+                //form_ClienteEditar clienteEdit = new form_ClienteEditar();
+                //clienteEdit.ClienteID = idCliente;
+                //clienteEdit.ShowDialog();
+                //CarregarTabelaClientes();
+
+            }
+
+            if (btn != null && btn.Tag.Equals("Deletar"))
+            {
+                popupClienteDeletar.PerformClick();
+            }
+
+        }
+            private void form_ClientePrincipal_Click(object sender, EventArgs e)
+            {
+                panelMiniPerfilCliente.Visible = false;
+                btnPanelClientePMED.Visible = false;
+            }
     }
 }

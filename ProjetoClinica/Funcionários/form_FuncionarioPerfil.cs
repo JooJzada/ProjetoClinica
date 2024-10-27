@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using DevExpress.XtraBars.Docking2010;
 using ProjetoClinica.Context;
 using ProjetoClinica.Utilidade;
 
@@ -72,5 +73,14 @@ namespace ProjetoClinica.Funcionários
 
         }
 
+        private void windowsUIButtonPanel1_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
+        {
+            WindowsUIButton btn = e.Button as WindowsUIButton;
+
+            if (btn != null && btn.Tag.Equals("Voltar"))
+            {
+                this.Close();
+            }
+        }
     }
 }

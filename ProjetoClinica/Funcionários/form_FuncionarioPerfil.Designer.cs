@@ -25,8 +25,6 @@
         private void InitializeComponent() {
             DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_FuncionarioPerfil));
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.windowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.imgFuncionarioPerfil = new System.Windows.Forms.PictureBox();
             this.lblFuncionarioNomeIdadePerfil = new DevExpress.XtraEditors.LabelControl();
@@ -41,7 +39,6 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.lblFuncionarioCrmPerfil = new DevExpress.XtraEditors.LabelControl();
             this.lblFuncionarioSalarioPerfil = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionarioPerfil)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,14 +46,11 @@
             // 
             this.windowsUIButtonPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(164)))), ((int)(((byte)(250)))));
             windowsUIButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions1.SvgImage")));
-            windowsUIButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions2.SvgImage")));
-            windowsUIButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions3.SvgImage")));
             this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("btnVoltarPerfil", false, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("btnEditarPerfil", false, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("btnDeletarPerfil", false, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("btnVoltarPerfil", false, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Voltar", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUISeparator()});
+            this.windowsUIButtonPanel1.ContentAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.windowsUIButtonPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.windowsUIButtonPanel1.Location = new System.Drawing.Point(0, 0);
             this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
@@ -65,6 +59,7 @@
             this.windowsUIButtonPanel1.TabIndex = 0;
             this.windowsUIButtonPanel1.Text = "windowsUIButtonPanel1";
             this.windowsUIButtonPanel1.UseButtonBackgroundImages = false;
+            this.windowsUIButtonPanel1.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel1_ButtonClick);
             this.windowsUIButtonPanel1.Click += new System.EventHandler(this.windowsUIButtonPanel1_Click);
             // 
             // imgFuncionarioPerfil
@@ -191,22 +186,11 @@
             this.lblFuncionarioSalarioPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFuncionarioSalarioPerfil.Appearance.Font = new System.Drawing.Font("Tahoma", 10.25F);
             this.lblFuncionarioSalarioPerfil.Appearance.Options.UseFont = true;
-            this.lblFuncionarioSalarioPerfil.Location = new System.Drawing.Point(624, 146);
+            this.lblFuncionarioSalarioPerfil.Location = new System.Drawing.Point(576, 146);
             this.lblFuncionarioSalarioPerfil.Name = "lblFuncionarioSalarioPerfil";
-            this.lblFuncionarioSalarioPerfil.Size = new System.Drawing.Size(85, 17);
+            this.lblFuncionarioSalarioPerfil.Size = new System.Drawing.Size(133, 17);
             this.lblFuncionarioSalarioPerfil.TabIndex = 14;
-            this.lblFuncionarioSalarioPerfil.Text = "R$ 99.999,99";
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(573, 147);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(45, 16);
-            this.labelControl10.TabIndex = 13;
-            this.labelControl10.Text = "Salário:";
+            this.lblFuncionarioSalarioPerfil.Text = "Salário: R$ 99.999,99";
             // 
             // form_FuncionarioPerfil
             // 
@@ -214,7 +198,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 178);
             this.Controls.Add(this.lblFuncionarioSalarioPerfil);
-            this.Controls.Add(this.labelControl10);
             this.Controls.Add(this.lblFuncionarioCrmPerfil);
             this.Controls.Add(this.lblFuncionarioCpfPerfil);
             this.Controls.Add(this.labelControl7);
@@ -253,6 +236,5 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl lblFuncionarioCrmPerfil;
         private DevExpress.XtraEditors.LabelControl lblFuncionarioSalarioPerfil;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
     }
 }

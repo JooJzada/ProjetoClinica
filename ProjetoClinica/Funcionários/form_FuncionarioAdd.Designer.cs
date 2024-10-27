@@ -33,7 +33,6 @@
             this.btnFuncionarioAdd = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.imgFuncionario = new DevExpress.XtraEditors.ImageEdit();
-            this.txtFuncionarioCargo = new DevExpress.XtraEditors.TextEdit();
             this.txtFuncionarioCPF = new DevExpress.XtraEditors.TextEdit();
             this.txtFuncionarioTelefone = new DevExpress.XtraEditors.TextEdit();
             this.txtFuncionarioEmail = new DevExpress.XtraEditors.TextEdit();
@@ -45,8 +44,8 @@
             this.txtFuncionarioSalario = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtFuncionarioCRM = new DevExpress.XtraEditors.TextEdit();
+            this.cBoxCargo = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioCargo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioCPF.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioTelefone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioEmail.Properties)).BeginInit();
@@ -55,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioFuncao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioSalario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioCRM.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cBoxCargo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -131,14 +131,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.imgFuncionario.Size = new System.Drawing.Size(111, 54);
             this.imgFuncionario.TabIndex = 20;
-            // 
-            // txtFuncionarioCargo
-            // 
-            this.txtFuncionarioCargo.Location = new System.Drawing.Point(12, 187);
-            this.txtFuncionarioCargo.Name = "txtFuncionarioCargo";
-            this.txtFuncionarioCargo.Properties.UseMaskAsDisplayFormat = true;
-            this.txtFuncionarioCargo.Size = new System.Drawing.Size(111, 20);
-            this.txtFuncionarioCargo.TabIndex = 5;
             // 
             // txtFuncionarioCPF
             // 
@@ -242,11 +234,29 @@
             this.txtFuncionarioCRM.Size = new System.Drawing.Size(209, 20);
             this.txtFuncionarioCRM.TabIndex = 8;
             // 
+            // cBoxCargo
+            // 
+            this.cBoxCargo.Location = new System.Drawing.Point(12, 187);
+            this.cBoxCargo.Name = "cBoxCargo";
+            this.cBoxCargo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cBoxCargo.Properties.Items.AddRange(new object[] {
+            "Médico",
+            "Enfermeiro",
+            "Recepcionista",
+            "Faxineiro",
+            "Tec. de Laboratório ",
+            "Biomédico"});
+            this.cBoxCargo.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cBoxCargo.Size = new System.Drawing.Size(111, 20);
+            this.cBoxCargo.TabIndex = 22;
+            // 
             // form_FuncionarioAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 362);
+            this.ClientSize = new System.Drawing.Size(368, 362);
+            this.Controls.Add(this.cBoxCargo);
             this.Controls.Add(this.imgFuncionario);
             this.Controls.Add(this.labelControl10);
             this.Controls.Add(this.btnFuncionarioAdd);
@@ -256,7 +266,6 @@
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.txtFuncionarioFuncao);
             this.Controls.Add(this.labelControl7);
-            this.Controls.Add(this.txtFuncionarioCargo);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.txtFuncionarioCPF);
             this.Controls.Add(this.labelControl5);
@@ -276,7 +285,6 @@
             this.Text = "Cadastro de Funcionário";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_FuncionarioAdd_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioCargo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioCPF.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioTelefone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioEmail.Properties)).EndInit();
@@ -285,6 +293,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioFuncao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioSalario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioCRM.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cBoxCargo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,7 +311,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtFuncionarioCPF;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtFuncionarioCargo;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.SimpleButton btnFuncionarioAdd;
         private DevExpress.XtraEditors.LabelControl labelControl10;
@@ -313,5 +321,6 @@
         private DevExpress.XtraEditors.TextEdit txtFuncionarioSalario;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.TextEdit txtFuncionarioCRM;
+        private DevExpress.XtraEditors.ComboBoxEdit cBoxCargo;
     }
 }
