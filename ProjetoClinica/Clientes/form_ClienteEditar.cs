@@ -61,5 +61,14 @@ namespace ProjetoClinica.Clientes
             this.Close();
 
         }
+
+        private void form_ClienteEditar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+
+        }
     }
 }

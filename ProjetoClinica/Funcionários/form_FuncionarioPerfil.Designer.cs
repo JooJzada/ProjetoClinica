@@ -214,6 +214,7 @@
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "form_FuncionarioPerfil";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_FuncionarioPerfil_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionarioPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -8,9 +8,12 @@ using ProjetoClinica.Enum;
 using ProjetoClinica.Funcionários;
 using ProjetoClinica.Utilidade;
 
-namespace ProjetoClinica {
-    public partial class form_TelaInicial : DevExpress.XtraEditors.XtraForm {
-        public form_TelaInicial() {
+namespace ProjetoClinica
+{
+    public partial class form_TelaInicial : DevExpress.XtraEditors.XtraForm
+    {
+        public form_TelaInicial()
+        {
             InitializeComponent();
             VerificarAcesso();
 
@@ -28,13 +31,10 @@ namespace ProjetoClinica {
                 btnFuncionarioPrincipalMenu.Visibility = BarItemVisibility.Never;
                 btnFuncionarioAddMenu.Visibility = BarItemVisibility.Never;
             }
-            
-
         }
 
-        
-
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraScheduler.TimeRuler timeRuler4 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraScheduler.TimeRuler timeRuler5 = new DevExpress.XtraScheduler.TimeRuler();
@@ -319,13 +319,14 @@ namespace ProjetoClinica {
 
         }
 
-        private void btnFuncionarioPrincipalMenu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
+        private void btnFuncionarioPrincipalMenu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
             form_FuncionarioPrincipal funcionarioPrincipal = new form_FuncionarioPrincipal();
             funcionarioPrincipal.ShowDialog();
         }
 
-
-        private void btnFuncionarioAddMenu_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
+        private void btnFuncionarioAddMenu_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
             form_FuncionarioAdd funcionarioAdd = new form_FuncionarioAdd();
             funcionarioAdd.ShowDialog();
         }
@@ -359,7 +360,7 @@ namespace ProjetoClinica {
             // TODO: esta linha de código carrega dados na tabela 'calendarioDataSet.Appointments'. Você pode movê-la ou removê-la conforme necessário.
             this.appointmentsTableAdapter.Fill(this.calendarioDataSet.Appointments);
 
-            
+            schedulerControl1.GoToToday();
         }
 
         private void barFuncionarioMenu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

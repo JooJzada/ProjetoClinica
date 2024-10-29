@@ -9,6 +9,7 @@ using ProjetoClinica.Funcionários;
 using ProjetoClinica.Utilidade;
 using System.Globalization;
 using DevExpress.XtraBars.Docking2010;
+using Microsoft.EntityFrameworkCore;
 using ProjetoClinica.Funcionários.Login;
 
 namespace ProjetoClinica
@@ -21,7 +22,6 @@ namespace ProjetoClinica
             CarregarTabelaFuncionario();
             VerificarAcesso();
         }
-
         public void CarregarTabelaFuncionario()
         {
             LinqInstantFeedbackSource linqInstantFeedbackSource = new LinqInstantFeedbackSource();
@@ -31,57 +31,52 @@ namespace ProjetoClinica
 
             linqInstantFeedbackSource.GetQueryable += LinqInstantFeedbackSource_GetQueryable;
             gridFuncionarios.DataSource = linqInstantFeedbackSource;
-
-
         }
+
         public void LinqInstantFeedbackSource_GetQueryable(object sender, GetQueryableEventArgs e)
-
         {
-            projeto_clinicaContext context = new projeto_clinicaContext();
+            using (projeto_clinicaContext context = new projeto_clinicaContext())
+            {
 
-            var query =
-                from funcionario in context.tb_funcionarios
-                orderby funcionario.fun_Nome ascending
-                select new
-                {
+                var query =
+                    from funcionario in context.tb_funcionarios
+                    orderby funcionario.fun_Nome ascending
+                    select new
+                    {
 
-                    funcionario.fun_ID,
-                    funcionario.fun_Nome,
-                    funcionario.fun_DataNascimento,
-                    funcionario.fun_CargoPrimario,
-                    funcionario.fun_CargoFuncao,
-                    funcionario.fun_Email,
-                    funcionario.fun_Telefone,
-                    funcionario.fun_CPF,
-                    funcionario.fun_Salario,
-                    funcionario.fun_MedCRM,
-                };
-            e.QueryableSource = query;
+                        funcionario.fun_ID,
+                        funcionario.fun_Nome,
+                        funcionario.fun_DataNascimento,
+                        funcionario.fun_CargoPrimario,
+                        funcionario.fun_CargoFuncao,
+                        funcionario.fun_Email,
+                        funcionario.fun_Telefone,
+                        funcionario.fun_CPF,
+                        funcionario.fun_Salario,
+                        funcionario.fun_MedCRM,
+                    };
+                e.QueryableSource = query;
+            }
         }
 
         private void VerificarAcesso()
         {
-
             if (Program.usuarioLogado.fun_admin != true)
             {
                 foreach (var item in btnPanelVoltarNovo.Buttons)
                 {
                     if (item is WindowsUIButton btn)
                     {
-
                         if (btn.Caption == "Novo")
                         {
                             btn.Visible = false;
                         }
                     }
                 }
-
+                viewFuncionarios.Columns["fun_Salario"].Visible = false;
                 btnPanelFunPED.Visible = false;
-                //viewFuncionarios.Columns["Salário"].Visible = false;
             }
         }
-
-
 
         private void btnDeletarFuncionario_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -90,25 +85,40 @@ namespace ProjetoClinica
 
             using (projeto_clinicaContext context = new projeto_clinicaContext())
             {
-                var funcionario = context.tb_funcionarios.Find(idFuncionario);
-                context.tb_funcionarios.Remove(funcionario);
-                context.SaveChanges();
+                DialogResult result = XtraMessageBox.Show($"Apagar {context.tb_funcionarios.Find(idFuncionario).fun_Nome}?", "Aviso",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
 
-                XtraMessageBox.Show("Funcionário deletado com sucesso!", "Sucesso", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-                CarregarTabelaFuncionario();
+                if (result == DialogResult.Yes)
+                {
+                    var resource = context.Resources.FirstOrDefault(f => f.fk_FunID == idFuncionario);
+                    var funcionario = context.tb_funcionarios.Find(idFuncionario);
+
+                    if (resource != null)
+                    {
+                        context.Resources.Remove(resource);
+                    }
+
+                    context.tb_funcionarios.Remove(funcionario);
+                    context.SaveChanges();
+
+                    XtraMessageBox.Show("Funcionário deletado com sucesso!", "Sucesso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    CarregarTabelaFuncionario();
+                }
             }
-
         }
 
         private void viewFuncionarios_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
-            if (e.HitInfo.HitTest == GridHitTest.RowCell)
+            if (Program.usuarioLogado.fun_admin == true)
             {
-                e.Allow = false;
-                popupFuncionarios.ShowPopup((gridFuncionarios.PointToScreen(e.Point)));
+                if (e.HitInfo.HitTest == GridHitTest.RowCell)
+                {
+                    e.Allow = false;
+                    popupFuncionarios.ShowPopup((gridFuncionarios.PointToScreen(e.Point)));
+                }
             }
-
         }
 
         private void btnEditarFuncionario_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -168,14 +178,21 @@ namespace ProjetoClinica
                     #endregion
 
                     lblFunNomeIdadeMini.Text =
-                        $"{funcionario.fun_Nome}, {CalcIdade.CalcularIdadeFuncionario(funcionario.fun_ID)}";
+                        $"Dr(a) {funcionario.fun_Nome}, {CalcIdade.CalcularIdadeFuncionario(funcionario.fun_ID)}";
                     lblFunCpfPerfilMini.Text = funcionario.fun_CPF;
                     lblFunEmailPerfilMini.Text = funcionario.fun_Email;
                     lblFunNascPerfilMini.Text = funcionario.fun_DataNascimento;
                     lblFunTelePerfilMini.Text = funcionario.fun_Telefone;
 
                     lblFuncionarioCrmPerfil.Text = funcionario.fun_MedCRM;
-                    lblFuncionarioSalarioPerfil.Text = $"Salário: {(funcionario.fun_Salario).ToString("C", CultureInfo.CurrentCulture)}";
+
+                    if (Program.usuarioLogado.fun_admin == true)
+                    {
+                        lblFuncionarioSalarioPerfil.Text = $"Salário: {(funcionario.fun_Salario).ToString("C", CultureInfo.CurrentCulture)}";
+                    } else
+                    {
+                        lblFuncionarioSalarioPerfil.Text = "";
+                    }
                     if (funcionario.fun_foto[0] == 0x00 || funcionario.fun_foto == null)
                     {
                         imgFunPerfil.Image = Properties.Resources.ImagemPadrao;
@@ -204,7 +221,6 @@ namespace ProjetoClinica
             panelMiniPerfilFun.Visible = false;
             btnPanelFunPED.Visible = false;
         }
-
         private void btnPanelVoltarNovo_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
         {
             WindowsUIButton btn = e.Button as WindowsUIButton;
@@ -220,14 +236,12 @@ namespace ProjetoClinica
                 funcionarioAdd.ShowDialog();
                 CarregarTabelaFuncionario();
             }
-
         }
 
         private void btnPanelFunPED_ButtonClick(object sender, ButtonEventArgs e)
         {
             var linhaSelecionada = viewFuncionarios.GetFocusedRowCellValue("fun_ID");
             int idCliente = Convert.ToInt32(linhaSelecionada);
-
 
             WindowsUIButton btn = e.Button as WindowsUIButton;
 
@@ -241,15 +255,25 @@ namespace ProjetoClinica
             if (btn != null && btn.Tag.Equals("Editar"))
             {
                 btnEditarFuncionario.PerformClick();
+            }
 
+            if (btn != null && btn.Tag.Equals("Login"))
+            {
+                btnRegEdtLogin.PerformClick();
             }
 
             if (btn != null && btn.Tag.Equals("Deletar"))
             {
                 btnDeletarFuncionario.PerformClick();
             }
-
         }
 
+        private void form_FuncionarioPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

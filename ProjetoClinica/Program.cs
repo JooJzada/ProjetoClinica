@@ -14,7 +14,6 @@ namespace ProjetoClinica
 {
     internal static class Program
     {
-
         static public bool isLogged { get; set; }
         static public tb_funcionarios usuarioLogado { get; set; }
 
@@ -30,19 +29,17 @@ namespace ProjetoClinica
             form_Login formLogin = new form_Login();
             formLogin.ShowDialog();
 
-
             if (isLogged == false)
             {
                 return;
             }
 
-            if (Program.usuarioLogado.fun_CargoPrimario == nameof(EnumGlobal.NivelAcesso.Médico)) //Fazer um IF Replace para não ficar essa feiura
+            if (Program.usuarioLogado.fun_CargoPrimario == "Médico")
             {
                 form_AgendaPessoal agendaPessoal = new form_AgendaPessoal();
                 agendaPessoal.ShowDialog();
             } else
                 Application.Run(new form_TelaInicial());
-
         }
     }
 }

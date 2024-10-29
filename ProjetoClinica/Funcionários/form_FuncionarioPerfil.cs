@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Windows.Forms;
 using DevExpress.XtraBars.Docking2010;
 using ProjetoClinica.Context;
 using ProjetoClinica.Utilidade;
@@ -14,7 +15,6 @@ namespace ProjetoClinica.Funcionários
 
         private int _funcionarioId;
         int anoAtual = DateTime.Now.Year;
-        // private DateTime anoNasc;
 
         public int FuncionarioID
         {
@@ -37,7 +37,6 @@ namespace ProjetoClinica.Funcionários
                     lblFuncionarioCargoPerfil.Text = $"{funcionario.fun_CargoPrimario}, {funcionario.fun_CargoFuncao}";
                 }
                 #endregion
-
                 #region CRM
                 if (string.IsNullOrWhiteSpace(funcionario.fun_MedCRM))
                 {
@@ -47,9 +46,6 @@ namespace ProjetoClinica.Funcionários
                     lblFuncionarioCrmPerfil.Text = funcionario.fun_MedCRM;
                 } 
                 #endregion
-
-                //var idade = CalcIdade.CalcularIdadeFuncionario(funcionario.fun_ID);
-
                 lblFuncionarioNascPerfil.Text = funcionario.fun_DataNascimento;
                 lblFuncionarioNomeIdadePerfil.Text = $"{funcionario.fun_Nome}, {CalcIdade.CalcularIdadeFuncionario(funcionario.fun_ID)}";
                 lblFuncionarioCpfPerfil.Text = funcionario.fun_CPF;
@@ -59,18 +55,14 @@ namespace ProjetoClinica.Funcionários
                 imgFuncionarioPerfil.Image = ConversorImagem.ConvertByteArrayToImg(funcionario.fun_foto);
             }
         }
-        
-
 
         public form_FuncionarioPerfil()
         {
             InitializeComponent();
         }
-
         private void windowsUIButtonPanel1_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void windowsUIButtonPanel1_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
@@ -78,6 +70,14 @@ namespace ProjetoClinica.Funcionários
             WindowsUIButton btn = e.Button as WindowsUIButton;
 
             if (btn != null && btn.Tag.Equals("Voltar"))
+            {
+                this.Close();
+            }
+        }
+
+        private void form_FuncionarioPerfil_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
             }

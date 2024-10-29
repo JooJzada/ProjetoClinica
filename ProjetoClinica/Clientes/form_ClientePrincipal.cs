@@ -53,7 +53,7 @@ namespace ProjetoClinica.Clientes
             e.QueryableSource = query;
         }
 
-   
+
 
         private void viewClientes_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
         {
@@ -100,7 +100,7 @@ namespace ProjetoClinica.Clientes
                         MessageBoxIcon.Information);
                     panelMiniPerfilCliente.Visible = false;
                     CarregarTabelaClientes();
-                   form_ClientePrincipal_Click(sender, e);
+                    form_ClientePrincipal_Click(sender, e);
                 }
 
             }
@@ -130,26 +130,15 @@ namespace ProjetoClinica.Clientes
                     imgClientePerfil.Image = ConversorImagem.ConvertByteArrayToImg(cliente.cl_foto);
                 }
 
-                
+
                 panelMiniPerfilCliente.Visible = true;
                 btnPanelClientePMED.Visible = true;
-                //imgClientePerfil.Image = cliente.cl_foto == null ? Properties.Resources.ImagemPadrao : ConversorImagem.ConvertByteArrayToImg(cliente.cl_foto);
+
             } else
             {
                 panelMiniPerfilCliente.Visible = false;
                 btnPanelClientePMED.Visible = false;
             }
-
-
-
-
-            //using (projeto_clinicaContext context = new projeto_clinicaContext())
-            //{
-            //    var cliente = context.tb_cliente.Find(idCliente);
-
-            //    lblClienteNomeIdadeMini.Text = $"{cliente.cl_nome}, {CalcIdade.CalcularIdadeCliente(cliente.cl_id)}";
-
-            //}
         }
 
         private void btnPanelVoltarNovo_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
@@ -167,8 +156,6 @@ namespace ProjetoClinica.Clientes
                 clienteAdd.ShowDialog();
                 CarregarTabelaClientes();
             }
-
-
         }
 
         private void btnPanelClientePMED_ButtonClick(object sender, ButtonEventArgs e)
@@ -200,12 +187,20 @@ namespace ProjetoClinica.Clientes
             {
                 popupClienteDeletar.PerformClick();
             }
+        }
+        private void form_ClientePrincipal_Click(object sender, EventArgs e)
+        {
+            panelMiniPerfilCliente.Visible = false;
+            btnPanelClientePMED.Visible = false;
+        }
+
+        private void form_ClientePrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
 
         }
-            private void form_ClientePrincipal_Click(object sender, EventArgs e)
-            {
-                panelMiniPerfilCliente.Visible = false;
-                btnPanelClientePMED.Visible = false;
-            }
     }
 }

@@ -8,8 +8,6 @@ namespace ProjetoClinica.Utilidade
     {
         public static Image ConvertByteArrayToImg(byte[] data)
         {
-
-            
             if (data[0] != 0)
             {
                 using (MemoryStream ms = new MemoryStream(data))
@@ -19,7 +17,6 @@ namespace ProjetoClinica.Utilidade
             }
             return null;
         }
-
 
         public static byte[] ConvertImgToByte(Image _img)
         {
@@ -31,9 +28,7 @@ namespace ProjetoClinica.Utilidade
                     return memoryStream.ToArray();
                 }
             }
-
             return new byte[] { 0 };
         }
-        
     }
 }

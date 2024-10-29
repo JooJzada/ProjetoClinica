@@ -206,9 +206,11 @@
             this.Controls.Add(this.txtClienteNome);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
+            this.IconOptions.Image = global::ProjetoClinica.Properties.Resources.Icone_Projeto_Clinica;
             this.IconOptions.ShowIcon = false;
             this.Name = "form_ClienteEditar";
             this.Text = "Editar Cliente";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_ClienteEditar_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.imgCliente.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClientePlano.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClienteCPF.Properties)).EndInit();

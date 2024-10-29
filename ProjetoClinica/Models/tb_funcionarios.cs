@@ -10,10 +10,7 @@ namespace ProjetoClinica.Models
 {
     public partial class tb_funcionarios
     {
-        public tb_funcionarios()
-        {
-            Resources = new HashSet<Resources>();
-        }
+        public tb_funcionarios() { }
 
         [Key]
         public int fun_ID { get; set; }
@@ -58,6 +55,6 @@ namespace ProjetoClinica.Models
         public string fun_senha { get; set; }
 
         [InverseProperty("fk_Fun")]
-        public virtual ICollection<Resources> Resources { get; set; }
+        public virtual Resources Resources { get; set; }
     }
 }

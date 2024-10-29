@@ -224,7 +224,6 @@
       <DependentUpon>form_ClientePrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Context\projeto_clinicaContext.cs" />
-    <Compile Include="Enum\EnumGlobal.cs" />
     <Compile Include="Funcionários\form_FuncionarioAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,16 +248,16 @@
     <Compile Include="Funcionários\form_FuncionarioPrincipal.Designer.cs">
       <DependentUpon>form_FuncionarioPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funcionários\Login\form_LoginReg.cs">
+    <Compile Include="Funcionários\form_LoginReg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Funcionários\Login\form_LoginReg.Designer.cs">
+    <Compile Include="Funcionários\form_LoginReg.Designer.cs">
       <DependentUpon>form_LoginReg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\form_Login.cs">
+    <Compile Include="1-Tela Inicial\form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\form_Login.Designer.cs">
+    <Compile Include="1-Tela Inicial\form_Login.Designer.cs">
       <DependentUpon>form_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Medico\form_AgendaPessoal.cs">
@@ -286,7 +285,6 @@
     </Compile>
     <Compile Include="Utilidade\CalcIdade.cs" />
     <Compile Include="Utilidade\ConversorImagem.cs" />
-    <Compile Include="Utilidade\VerificadorAcesso.cs" />
     <Compile Include="XPO\projeto_clinicahospitalarCode\Appointmentsxpo.cs" />
     <Compile Include="XPO\projeto_clinicahospitalarCode\Appointmentsxpo.Designer.cs">
       <DependentUpon>Appointmentsxpo.cs</DependentUpon>
@@ -335,10 +333,10 @@
       <DependentUpon>form_TelaInicial.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Funcionários\Login\form_LoginReg.resx">
+    <EmbeddedResource Include="Funcionários\form_LoginReg.resx">
       <DependentUpon>form_LoginReg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\form_Login.resx">
+    <EmbeddedResource Include="1-Tela Inicial\form_Login.resx">
       <DependentUpon>form_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Medico\form_AgendaPessoal.resx">

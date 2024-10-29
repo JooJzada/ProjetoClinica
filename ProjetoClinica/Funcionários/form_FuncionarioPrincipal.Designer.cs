@@ -30,6 +30,7 @@
             DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions6 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.gridFuncionarios = new DevExpress.XtraGrid.GridControl();
             this.viewFuncionarios = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,6 +46,7 @@
             this.btnAbrirPerfil = new DevExpress.XtraBars.BarButtonItem();
             this.btnEditarFuncionario = new DevExpress.XtraBars.BarButtonItem();
             this.btnDeletarFuncionario = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRegEdtLogin = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -68,7 +70,7 @@
             this.lblFunNomeIdadeMini = new DevExpress.XtraEditors.LabelControl();
             this.imgFunPerfil = new System.Windows.Forms.PictureBox();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
-            this.btnRegEdtLogin = new DevExpress.XtraBars.BarButtonItem();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupFuncionarios)).BeginInit();
@@ -76,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelMiniPerfilFun)).BeginInit();
             this.panelMiniPerfilFun.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgFunPerfil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridFuncionarios
@@ -165,6 +168,7 @@
             this.gridColumnSalario.Caption = "Salário";
             this.gridColumnSalario.FieldName = "fun_Salario";
             this.gridColumnSalario.Name = "gridColumnSalario";
+            this.gridColumnSalario.OptionsColumn.AllowShowHide = false;
             this.gridColumnSalario.Visible = true;
             this.gridColumnSalario.VisibleIndex = 7;
             // 
@@ -180,9 +184,9 @@
             // 
             this.popupFuncionarios.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnAbrirPerfil),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnRegEdtLogin),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEditarFuncionario),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnDeletarFuncionario),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnRegEdtLogin)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDeletarFuncionario)});
             this.popupFuncionarios.Manager = this.barManager1;
             this.popupFuncionarios.Name = "popupFuncionarios";
             // 
@@ -209,6 +213,14 @@
             this.btnDeletarFuncionario.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeletarFuncionario.ImageOptions.SvgImage")));
             this.btnDeletarFuncionario.Name = "btnDeletarFuncionario";
             this.btnDeletarFuncionario.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDeletarFuncionario_ItemClick);
+            // 
+            // btnRegEdtLogin
+            // 
+            this.btnRegEdtLogin.Caption = "Registrar/Editar Login";
+            this.btnRegEdtLogin.Id = 3;
+            this.btnRegEdtLogin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRegEdtLogin.ImageOptions.SvgImage")));
+            this.btnRegEdtLogin.Name = "btnRegEdtLogin";
+            this.btnRegEdtLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRegEdtLogin_ItemClick);
             // 
             // barManager1
             // 
@@ -262,12 +274,15 @@
             windowsUIButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions1.SvgImage")));
             windowsUIButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions2.SvgImage")));
             windowsUIButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions3.SvgImage")));
+            windowsUIButtonImageOptions4.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions4.SvgImage")));
             this.btnPanelFunPED.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Perfil", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Perfil", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Editar", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Editar", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Deletar", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Deletar", -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Login", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Login", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Deletar", true, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Deletar", -1, false)});
             this.btnPanelFunPED.Location = new System.Drawing.Point(0, 195);
             this.btnPanelFunPED.Name = "btnPanelFunPED";
             this.btnPanelFunPED.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -281,12 +296,12 @@
             // btnPanelVoltarNovo
             // 
             this.btnPanelVoltarNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(164)))), ((int)(((byte)(250)))));
-            windowsUIButtonImageOptions4.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions4.SvgImage")));
             windowsUIButtonImageOptions5.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions5.SvgImage")));
+            windowsUIButtonImageOptions6.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions6.SvgImage")));
             this.btnPanelVoltarNovo.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Voltar", false, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Voltar", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Voltar", false, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Voltar", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Novo", true, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Novo", -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Novo", true, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Novo", -1, false)});
             this.btnPanelVoltarNovo.Location = new System.Drawing.Point(0, -628);
             this.btnPanelVoltarNovo.Name = "btnPanelVoltarNovo";
             this.btnPanelVoltarNovo.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -468,14 +483,6 @@
             this.barDockControl1.Manager = this.barManager1;
             this.barDockControl1.Size = new System.Drawing.Size(0, 720);
             // 
-            // btnRegEdtLogin
-            // 
-            this.btnRegEdtLogin.Caption = "Registrar/Editar Login";
-            this.btnRegEdtLogin.Id = 3;
-            this.btnRegEdtLogin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRegEdtLogin.ImageOptions.SvgImage")));
-            this.btnRegEdtLogin.Name = "btnRegEdtLogin";
-            this.btnRegEdtLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRegEdtLogin_ItemClick);
-            // 
             // form_FuncionarioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,6 +503,7 @@
             this.Name = "form_FuncionarioPrincipal";
             this.Text = "Tabela de Funcionários";
             this.Click += new System.EventHandler(this.form_FuncionarioPrincipal_Click);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_FuncionarioPrincipal_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridFuncionarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewFuncionarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupFuncionarios)).EndInit();
@@ -504,6 +512,7 @@
             this.panelMiniPerfilFun.ResumeLayout(false);
             this.panelMiniPerfilFun.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgFunPerfil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -550,5 +559,6 @@
         private DevExpress.XtraEditors.LabelControl lblFuncionarioCargoPerfilMini;
         private DevExpress.XtraEditors.LabelControl lblFuncionarioSalarioPerfil;
         private DevExpress.XtraBars.BarButtonItem btnRegEdtLogin;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
     }
 }

@@ -40,6 +40,13 @@
             this.btnPanelClientePMED = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.gridClientes = new DevExpress.XtraGrid.GridControl();
             this.viewClientes = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelMiniPerfilCliente = new DevExpress.XtraEditors.PanelControl();
             this.lblFuncionarioCrmPerfil = new DevExpress.XtraEditors.LabelControl();
             this.lblClienteCpfPerfilMini = new DevExpress.XtraEditors.LabelControl();
@@ -131,12 +138,74 @@
             // 
             // viewClientes
             // 
+            this.viewClientes.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7});
             this.viewClientes.GridControl = this.gridClientes;
             this.viewClientes.Name = "viewClientes";
             this.viewClientes.OptionsBehavior.Editable = false;
             this.viewClientes.OptionsView.ShowIndicator = false;
             this.viewClientes.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.viewClientes_RowCellClick);
             this.viewClientes.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.viewClientes_PopupMenuShowing);
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "ID";
+            this.gridColumn1.FieldName = "cl_id";
+            this.gridColumn1.Name = "gridColumn1";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Nome";
+            this.gridColumn2.FieldName = "cl_nome";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "CPF";
+            this.gridColumn3.FieldName = "cl_cpf";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Data de Nasc.";
+            this.gridColumn4.FieldName = "cl_data_nascimento";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 2;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Email";
+            this.gridColumn5.FieldName = "cl_email";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 3;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Telefone";
+            this.gridColumn6.FieldName = "cl_telefone";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 4;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Plano";
+            this.gridColumn7.FieldName = "cl_plano";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 5;
             // 
             // panelMiniPerfilCliente
             // 
@@ -350,11 +419,13 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = global::ProjetoClinica.Properties.Resources.Icone_Projeto_Clinica;
             this.IconOptions.ShowIcon = false;
             this.Name = "form_ClientePrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_ClientePrincipal";
             this.Click += new System.EventHandler(this.form_ClientePrincipal_Click);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_ClientePrincipal_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelMiniPerfilCliente)).EndInit();
@@ -395,5 +466,12 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
     }
 }

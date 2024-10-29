@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_ClientePerfil));
             this.lblClientePlanoPerfil = new DevExpress.XtraEditors.LabelControl();
             this.lblClienteCpfPerfil = new DevExpress.XtraEditors.LabelControl();
@@ -157,10 +157,10 @@
             // windowsUIButtonPanel1
             // 
             this.windowsUIButtonPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(164)))), ((int)(((byte)(250)))));
-            windowsUIButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions2.SvgImage")));
+            windowsUIButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions1.SvgImage")));
             this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("btnVoltarPerfil", false, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Voltar", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("btnVoltarPerfil", false, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "Voltar", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator()});
             this.windowsUIButtonPanel1.ContentAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.windowsUIButtonPanel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -191,8 +191,10 @@
             this.Controls.Add(this.imgClientePerfil);
             this.Controls.Add(this.windowsUIButtonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = global::ProjetoClinica.Properties.Resources.Icone_Projeto_Clinica;
             this.Name = "form_ClientePerfil";
             this.Text = "form_ClientePerfil";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_ClientePerfil_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.imgClientePerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

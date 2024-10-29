@@ -18,14 +18,6 @@ namespace ProjetoClinica.Clientes
 
         private void btnClienteAdd_Click(object sender, EventArgs e)
         {
-            //if (imgCliente.Image == null)
-            //{
-            //    novoCliente.cl_foto = Properties.Resources.
-
-            //    XtraMessageBox.Show("Anexe uma imagem do cliente!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-
             tb_cliente novoCliente = new tb_cliente();
             novoCliente.cl_nome = txtClienteNome.Text;
 
@@ -52,6 +44,8 @@ namespace ProjetoClinica.Clientes
 
             XtraMessageBox.Show("Cliente adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            this.Close();
         }
 
         private void form_ClienteAdd_KeyDown(object sender, KeyEventArgs e)

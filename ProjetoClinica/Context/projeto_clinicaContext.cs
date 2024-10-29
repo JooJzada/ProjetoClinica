@@ -33,19 +33,6 @@ namespace ProjetoClinica.Context
             }
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Resources>(entity =>
-            {
-                entity.HasOne(d => d.fk_Fun)
-                    .WithMany(p => p.Resources)
-                    .HasForeignKey(d => d.fk_FunID)
-                    .HasConstraintName("FK_Resources_tb_funcionarios");
-            });
-
-            OnModelCreatingPartial(modelBuilder);
-        }
-
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

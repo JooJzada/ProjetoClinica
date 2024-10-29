@@ -207,6 +207,7 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.IconOptions.Image = global::ProjetoClinica.Properties.Resources.Icone_Projeto_Clinica;
+            this.IconOptions.ShowIcon = false;
             this.KeyPreview = true;
             this.Name = "form_ClienteAdd";
             this.Text = "Cadastro de Clientes ";

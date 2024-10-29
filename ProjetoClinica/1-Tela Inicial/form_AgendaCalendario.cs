@@ -26,7 +26,6 @@ namespace ProjetoClinica._1_Tela_Inicial
             this.appointmentsTableAdapter.Fill(this.calendarioDataSet.Appointments);
 
             schedulerControl1.GoToToday();
-
         }
 
         private void schedulerDataStorage1_AppointmentsChanged(object sender, DevExpress.XtraScheduler.PersistentObjectsEventArgs e)
@@ -34,7 +33,5 @@ namespace ProjetoClinica._1_Tela_Inicial
             appointmentsTableAdapter.Update(calendarioDataSet);
             calendarioDataSet.AcceptChanges();
         }
-
-
     }
 }

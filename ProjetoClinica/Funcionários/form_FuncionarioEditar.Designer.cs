@@ -272,8 +272,11 @@
             this.Controls.Add(this.txtFuncionarioNome);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
+            this.IconOptions.Image = global::ProjetoClinica.Properties.Resources.Icone_Projeto_Clinica;
+            this.IconOptions.ShowIcon = false;
             this.Name = "form_FuncionarioEditar";
-            this.Text = "form_FuncionarioEditar";
+            this.Text = "Editar Funcionário";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_FuncionarioEditar_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.imgFuncionario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioCRM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuncionarioSalario.Properties)).EndInit();

@@ -5,9 +5,6 @@ namespace ProjetoClinica.Utilidade
 {
     public class CalcIdade
     {
-         
-
-
         public static int CalcularIdadeCliente(int _clienteId)
         {
             int anoAtual = DateTime.Now.Year;
@@ -41,9 +38,5 @@ namespace ProjetoClinica.Utilidade
 
             return idade;
         }
-
-
-
-
     }
 }
