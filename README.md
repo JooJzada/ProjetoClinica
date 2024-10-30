@@ -1,7 +1,10 @@
 # ProjetoClinica
-Criação de um sistema para uma clínica
+Sistema Simples Clínica Médica (Primeiro projeto)
 
-- Banco de Clientes e Funcionários (Contato, Foto e outras informações)
-- Verificação de Nível de Acesso para realizar modificações e visualizar certas informações (Admin, médico e outros)
-- Agenda para realizar marcação de consultas e outras atividades
-- Médicos com agenda e tela pessoal, vendo apenas as consultas marcadas a ele  
+- Sistema com Banco de clientes e funcionários, podendo ser adicionado, editado e removido (com base no nível de acesso)
+
+- Login e senha para funcionários, podendo ser adicionado pelo Administrador
+
+- Agendamento de consultas, funcionários com login possuem controle sobre o Scheduler de Agendamentos
+
+- Médicos possuem uma tela pessoal, apenas com suas consultas
