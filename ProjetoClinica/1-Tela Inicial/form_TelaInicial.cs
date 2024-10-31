@@ -1,12 +1,8 @@
-﻿using System.Windows.Forms;
-using DevExpress.XtraBars;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraBars;
 using DevExpress.XtraScheduler;
 using ProjetoClinica._1_Tela_Inicial;
 using ProjetoClinica.Clientes;
-using ProjetoClinica.Enum;
 using ProjetoClinica.Funcionários;
-using ProjetoClinica.Utilidade;
 
 namespace ProjetoClinica
 {

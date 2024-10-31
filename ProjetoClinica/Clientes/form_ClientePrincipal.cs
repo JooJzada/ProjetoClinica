@@ -38,6 +38,7 @@ namespace ProjetoClinica.Clientes
         {
             projeto_clinicaContext context = new projeto_clinicaContext();
 
+
             var query = from cliente in context.tb_cliente
                         orderby cliente.cl_nome ascending
                         select new
@@ -50,9 +51,10 @@ namespace ProjetoClinica.Clientes
                             cliente.cl_telefone,
                             cliente.cl_plano
                         };
-            e.QueryableSource = query;
-        }
 
+            e.QueryableSource = query;
+
+        }
 
 
         private void viewClientes_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)

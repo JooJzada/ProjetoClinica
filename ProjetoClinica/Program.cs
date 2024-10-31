@@ -3,7 +3,6 @@ using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
 using DevExpress.Xpo.DB;
-using ProjetoClinica.Enum;
 using ProjetoClinica.Login;
 using ProjetoClinica.Medico;
 using ProjetoClinica.Models;

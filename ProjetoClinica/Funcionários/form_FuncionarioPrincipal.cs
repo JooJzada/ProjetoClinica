@@ -16,6 +16,7 @@ namespace ProjetoClinica
 {
     public partial class form_FuncionarioPrincipal : DevExpress.XtraEditors.XtraForm
     {
+        private projeto_clinicaContext context = new projeto_clinicaContext();
         public form_FuncionarioPrincipal()
         {
             InitializeComponent();
@@ -35,10 +36,9 @@ namespace ProjetoClinica
 
         public void LinqInstantFeedbackSource_GetQueryable(object sender, GetQueryableEventArgs e)
         {
-            using (projeto_clinicaContext context = new projeto_clinicaContext())
-            {
+            projeto_clinicaContext context = new projeto_clinicaContext();
 
-                var query =
+            var query =
                     from funcionario in context.tb_funcionarios
                     orderby funcionario.fun_Nome ascending
                     select new
@@ -56,7 +56,7 @@ namespace ProjetoClinica
                         funcionario.fun_MedCRM,
                     };
                 e.QueryableSource = query;
-            }
+            
         }
 
         private void VerificarAcesso()
@@ -80,11 +80,11 @@ namespace ProjetoClinica
 
         private void btnDeletarFuncionario_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            using (projeto_clinicaContext context = new projeto_clinicaContext())
+            {
             var linhaSelecionada = viewFuncionarios.GetFocusedRowCellValue("fun_ID");
             int idFuncionario = Convert.ToInt32(linhaSelecionada);
 
-            using (projeto_clinicaContext context = new projeto_clinicaContext())
-            {
                 DialogResult result = XtraMessageBox.Show($"Apagar {context.tb_funcionarios.Find(idFuncionario).fun_Nome}?", "Aviso",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning);
@@ -155,9 +155,9 @@ namespace ProjetoClinica
         private void viewFuncionarios_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
 
-            var linhaId = viewFuncionarios.GetFocusedRowCellValue("fun_ID");
             using (projeto_clinicaContext context = new projeto_clinicaContext())
             {
+            var linhaId = viewFuncionarios.GetFocusedRowCellValue("fun_ID");
                 var funcionario = context.tb_funcionarios.FirstOrDefault(f => f.fun_ID == (int)linhaId);
                 if (funcionario != null)
                 {

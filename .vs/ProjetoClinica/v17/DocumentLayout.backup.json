@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\projetoclinica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|c:\\users\\jorge victor\\desktop\\git projeto clinica\\projetoclinica\\projetoclinica\\clientes\\form_clienteprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\clientes\\form_clienteprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|c:\\users\\jorge victor\\desktop\\git projeto clinica\\projetoclinica\\projetoclinica\\1-tela inicial\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\1-tela inicial\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|c:\\users\\jorge victor\\desktop\\git projeto clinica\\projetoclinica\\projetoclinica\\clientes\\form_clienteprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\clientes\\form_clienteprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|c:\\users\\jorge victor\\desktop\\git projeto clinica\\projetoclinica\\projetoclinica\\1-tela inicial\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\1-tela inicial\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\projetoclinica\\funcion\u00E1rios\\form_funcionarioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\funcion\u00E1rios\\form_funcionarioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|c:\\users\\jorge victor\\desktop\\git projeto clinica\\projetoclinica\\projetoclinica\\1-tela inicial\\form_agendacalendario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\1-tela inicial\\form_agendacalendario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|c:\\users\\jorge victor\\desktop\\git projeto clinica\\projetoclinica\\projetoclinica\\1-tela inicial\\form_agendacalendario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\1-tela inicial\\form_agendacalendario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|c:\\users\\jorge victor\\desktop\\git projeto clinica\\projetoclinica\\projetoclinica\\1-tela inicial\\form_telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\projetoclinica\\1-tela inicial\\form_telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\1-tela inicial\\form_telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|c:\\users\\jorge victor\\desktop\\git projeto clinica\\projetoclinica\\projetoclinica\\1-tela inicial\\form_telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|c:\\users\\jorge victor\\desktop\\git projeto clinica\\projetoclinica\\projetoclinica\\funcion\u00E1rios\\form_funcionarioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\funcion\u00E1rios\\form_funcionarioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\projetoclinica\\1-tela inicial\\form_telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\1-tela inicial\\form_telainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\projetoclinica\\context\\projeto_clinicacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\context\\projeto_clinicacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\projetoclinica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527B2A6B-BBC9-4436-B7C1-05FC68632E32}|ProjetoClinica\\ProjetoClinica.csproj|solutionrelative:projetoclinica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,89 +55,101 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Program.cs",
-              "RelativeDocumentMoniker": "ProjetoClinica\\Program.cs",
-              "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Program.cs",
-              "RelativeToolTip": "ProjetoClinica\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAABEAAAAAAAAAA==",
+              "Title": "form_ClientePrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Clientes\\form_ClientePrincipal.cs",
+              "RelativeDocumentMoniker": "ProjetoClinica\\Clientes\\form_ClientePrincipal.cs",
+              "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Clientes\\form_ClientePrincipal.cs",
+              "RelativeToolTip": "ProjetoClinica\\Clientes\\form_ClientePrincipal.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAqwCsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T16:37:23.047Z",
+              "WhenOpened": "2024-10-31T18:51:08.901Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "form_Login.cs",
-              "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_Login.cs",
-              "RelativeDocumentMoniker": "ProjetoClinica\\1-Tela Inicial\\form_Login.cs",
-              "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_Login.cs",
-              "RelativeToolTip": "ProjetoClinica\\1-Tela Inicial\\form_Login.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAAAZAAAAAAAAAA==",
+              "Title": "form_ClientePrincipal.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Clientes\\form_ClientePrincipal.cs",
+              "RelativeDocumentMoniker": "ProjetoClinica\\Clientes\\form_ClientePrincipal.cs",
+              "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Clientes\\form_ClientePrincipal.cs [Design]",
+              "RelativeToolTip": "ProjetoClinica\\Clientes\\form_ClientePrincipal.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T22:38:38.268Z",
+              "WhenOpened": "2024-10-31T18:45:08.855Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "projeto_clinicaContext.cs",
+              "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Context\\projeto_clinicaContext.cs",
+              "RelativeDocumentMoniker": "ProjetoClinica\\Context\\projeto_clinicaContext.cs",
+              "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Context\\projeto_clinicaContext.cs",
+              "RelativeToolTip": "ProjetoClinica\\Context\\projeto_clinicaContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T17:34:11.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "form_FuncionarioPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Funcion\u00E1rios\\form_FuncionarioPrincipal.cs",
+              "RelativeDocumentMoniker": "ProjetoClinica\\Funcion\u00E1rios\\form_FuncionarioPrincipal.cs",
+              "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Funcion\u00E1rios\\form_FuncionarioPrincipal.cs",
+              "RelativeToolTip": "ProjetoClinica\\Funcion\u00E1rios\\form_FuncionarioPrincipal.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T17:29:33.162Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "form_Login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_Login.cs",
-              "RelativeDocumentMoniker": "ProjetoClinica\\1-Tela Inicial\\form_Login.cs",
-              "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_Login.cs [Design]",
-              "RelativeToolTip": "ProjetoClinica\\1-Tela Inicial\\form_Login.cs [Design]",
+              "Title": "form_FuncionarioPrincipal.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Funcion\u00E1rios\\form_FuncionarioPrincipal.cs",
+              "RelativeDocumentMoniker": "ProjetoClinica\\Funcion\u00E1rios\\form_FuncionarioPrincipal.cs",
+              "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Funcion\u00E1rios\\form_FuncionarioPrincipal.cs [Design]",
+              "RelativeToolTip": "ProjetoClinica\\Funcion\u00E1rios\\form_FuncionarioPrincipal.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T22:38:37.123Z",
+              "WhenOpened": "2024-10-30T17:29:29.412Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "form_TelaInicial.cs",
               "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_TelaInicial.cs",
               "RelativeDocumentMoniker": "ProjetoClinica\\1-Tela Inicial\\form_TelaInicial.cs",
               "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_TelaInicial.cs",
               "RelativeToolTip": "ProjetoClinica\\1-Tela Inicial\\form_TelaInicial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T22:37:28.608Z",
+              "WhenOpened": "2024-10-30T17:27:31.856Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Program.cs",
+              "RelativeDocumentMoniker": "ProjetoClinica\\Program.cs",
+              "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\Program.cs",
+              "RelativeToolTip": "ProjetoClinica\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T17:27:23.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "form_TelaInicial.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_TelaInicial.cs",
               "RelativeDocumentMoniker": "ProjetoClinica\\1-Tela Inicial\\form_TelaInicial.cs",
               "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_TelaInicial.cs [Design]",
               "RelativeToolTip": "ProjetoClinica\\1-Tela Inicial\\form_TelaInicial.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T22:37:27.118Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "form_AgendaCalendario.cs",
-              "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_AgendaCalendario.cs",
-              "RelativeDocumentMoniker": "ProjetoClinica\\1-Tela Inicial\\form_AgendaCalendario.cs",
-              "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_AgendaCalendario.cs",
-              "RelativeToolTip": "ProjetoClinica\\1-Tela Inicial\\form_AgendaCalendario.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T22:37:15.117Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "form_AgendaCalendario.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_AgendaCalendario.cs",
-              "RelativeDocumentMoniker": "ProjetoClinica\\1-Tela Inicial\\form_AgendaCalendario.cs",
-              "ToolTip": "C:\\Users\\Jorge Victor\\Desktop\\GIT Projeto Clinica\\ProjetoClinica\\ProjetoClinica\\1-Tela Inicial\\form_AgendaCalendario.cs [Design]",
-              "RelativeToolTip": "ProjetoClinica\\1-Tela Inicial\\form_AgendaCalendario.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T22:37:14.05Z",
+              "WhenOpened": "2024-10-30T17:27:02.394Z",
               "EditorCaption": " [Design]"
             }
           ]
